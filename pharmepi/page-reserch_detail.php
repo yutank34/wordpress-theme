@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+<main id="main" class="m-all t-2of3 wrap cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -9,10 +9,6 @@
 
 					<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
 
-					<p class="byline vcard">
-						<?php printf(__('Posted', 'bonestheme') . ' <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> ' . __('by',  'bonestheme') . ' <span class="author">%3$s</span>', get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link(get_the_author_meta('ID'))); ?>
-					</p>
-
 				</header> <?php // end article header 
 							?>
 
@@ -20,64 +16,42 @@
 					<?php
 					// the content (pretty self explanatory huh)
 					the_content();
-
-					/*
-			 * Link Pages is used in case you have posts that are set to break into
-			 * multiple pages. You can remove this if you don't plan on doing that.
-			 *
-			 * Also, breaking content up into multiple pages is a horrible experience,
-			 * so don't do it. While there are SOME edge cases where this is useful, it's
-			 * mostly used for people to get more ad views. It's up to you but if you want
-			 * to do it, you're wrong and I hate you. (Ok, I still love you but just not as much)
-			 *
-			 * http://gizmodo.com/5841121/google-wants-to-help-you-avoid-stupid-annoying-multiple-page-articles
-			 *
-			*/
-					wp_link_pages(array(
-						'before'      => '<div class="page-links"><span class="page-links-title">' . __('Pages:', 'bonestheme') . '</span>',
-						'after'       => '</div>',
-						'link_before' => '<span>',
-						'link_after'  => '</span>',
-					));
 					?>
-				</section> <?php // end article section 
-							?>
-
-				</div>
-				<h2>get_post_types</h2>
-				<?php
-				$post_types = get_post_types('', 'names');
-				foreach ($post_types as $post_type) {
-					echo '<p>' . $post_type . '</p>';
-				}
-				?>
-
-				<h2>get_taxonomies</h2>
-				<?php
-				$taxonomies = get_taxonomies();
-				foreach ($taxonomies as $taxonomy) {
-					echo '<p>' . $taxonomy . '</p>';
-				}
-				?>
-
-				<h2>get_terms</h2>
-				<?php
-				$terms = get_terms('details');
-				if (!empty($terms) && !is_wp_error($terms)) {
-					echo '<ul>';
-					foreach ($terms as $term) {
-						echo '<li>' . $term->name . '</li>';
+				</section>
+				<section>
+					<h2>get_post_types</h2>
+					<?php
+					$post_types = get_post_types('', 'names');
+					foreach ($post_types as $post_type) {
+						echo '<p>' . $post_type . '</p>';
 					}
-					echo '</ul>';
-				}
-				?>
+					?>
 
-				<?php comments_template(); ?>
+					<h2>get_taxonomies</h2>
+					<?php
+					$taxonomies = get_taxonomies();
+					foreach ($taxonomies as $taxonomy) {
+						echo '<p>' . $taxonomy . '</p>';
+					}
+					?>
 
-			</article>
-
-	<?php endwhile;
+					<h2>get_terms</h2>
+					<?php
+					$terms = get_terms('details');
+					if (!empty($terms) && !is_wp_error($terms)) {
+						echo '<ul>';
+						foreach ($terms as $term) {
+							echo '<li>' . $term->name . '</li>';
+						}
+						echo '</ul>';
+					}
+					?>
+					<?php comments_template(); ?>
+			<?php endwhile;
 	endif; ?>
-
+				</section>
+				<?php // end article section 
+				?>
+			</article>
 </main>
 <?php get_footer(); ?>
