@@ -1,3 +1,11 @@
+<?php add_filter( 'wp_head', function() {
+    ?>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/html/tab/tab.css">
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/html/tab/tab.js"></script>
+    <?php
+} );
+?>
+
 <?php get_header(); ?>
 <main id="main" class="m-all t-2of3 wrap cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
@@ -49,6 +57,23 @@
 					<?php comments_template(); ?>
 			<?php endwhile;
 	endif; ?>
+				</section>
+				<section>
+					<div class="tab-panel">
+						<!--タブ-->
+						<ul class="tab-group">
+							<li class="tab tab-A is-active">Tab-A</li>
+							<li class="tab tab-B">Tab-B</li>
+							<li class="tab tab-C">Tab-C</li>
+						</ul>
+
+						<!--タブを切り替えて表示するコンテンツ-->
+						<div class="panel-group">
+							<div class="panel tab-A is-show">Content-A</div>
+							<div class="panel tab-B">Content-B</div>
+							<div class="panel tab-C">Content-C</div>
+						</div>
+					</div>
 				</section>
 				<?php // end article section 
 				?>
