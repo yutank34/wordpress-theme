@@ -92,7 +92,7 @@
 								if (!empty($terms) && !is_wp_error($terms)) {
 									$isFirst = true;
 									foreach ($terms as $term) {
-										$classParam = 'tab tab-' . $term->term_id;
+										$classParam = 'tab tab-width tab-' . $term->term_id;
 										if ($isFirst) {
 											$classParam = $classParam . ' is-active';
 										}

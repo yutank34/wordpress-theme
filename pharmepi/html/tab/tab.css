@@ -4,6 +4,7 @@
 
 .tab-group{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin: 0px;
 }
@@ -16,6 +17,10 @@
   cursor:pointer;
   margin: 0px;
 }
+.tab-width {
+  width: 25%;
+}
+
 .panel-group{
   border:solid 1px #CCC;
   border-top:none;
@@ -39,4 +44,10 @@
 .margin0 {
   margin: 0px;
   padding: 16px;
+}
+
+@media screen and (max-width: 600px) {
+  .tab-width {
+    width: 50%;
+  }
 }
