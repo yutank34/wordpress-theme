@@ -83,28 +83,26 @@
 	endif; ?>
 				</section>
 				<section>
-					<div class="tab-panel">
-						<!--タブ-->
-						<ul class="tab-group">
-							<?php
-							$terms = get_terms('details');
-							if (!empty($terms) && !is_wp_error($terms)) {
-								$isFirst = true;
-								foreach ($terms as $term) {
-									$classParam = 'tab tab-' . $term->term_id;
-									if ($isFirst) {
-										$classParam = $classParam . ' is-active';
+					<div class="tab-wrapper">
+						<div class="tab-panel">
+							<!--タブ-->
+							<ul class="tab-group">
+								<?php
+								$terms = get_terms('details');
+								if (!empty($terms) && !is_wp_error($terms)) {
+									$isFirst = true;
+									foreach ($terms as $term) {
+										$classParam = 'tab tab-' . $term->term_id;
+										if ($isFirst) {
+											$classParam = $classParam . ' is-active';
+										}
+										echo '<li class="' . $classParam . '">' . $term->name . '</li>';
+										$isFirst = false;
 									}
-									echo '<li class="' . $classParam . '">' . $term->name . '</li>';
-									$isFirst = false;
 								}
-							}
-							?>
-							<!-- <li class="tab tab-A is-active">Tab-A</li>
-							<li class="tab tab-B">Tab-B</li>
-							<li class="tab tab-C">Tab-C</li> -->
-						</ul>
-
+								?>
+							</ul>
+						</div>
 						<!--タブを切り替えて表示するコンテンツ-->
 						<div class="panel-group">
 							<?php
@@ -130,7 +128,7 @@
 									$isFirst = false
 								?>
 								<div class="<?php echo $panelArgs; ?>">
-									<ul>
+									<ul class="margin0">
 										<?php foreach($tax_posts as $tax_post): ?>
 										<li>
 											<a href="<?php echo get_permalink($tax_post->ID); ?>"><?php echo get_the_title($tax_post->ID); ?></a>
@@ -142,9 +140,6 @@
 								endif;
 								endforeach;
 								?>
-							<!-- <div class="panel tab-A is-show">Content-A</div>
-							<div class="panel tab-B">Content-B</div>
-							<div class="panel tab-C">Content-C</div> -->
 						</div>
 					</div>
 				</section>
