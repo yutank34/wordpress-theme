@@ -9,8 +9,7 @@
   }
   
   .accordion__container {
-    width: 300px;
-    margin: 0 auto;
+    margin: 20px;
   }
   
   .accordion__title {
@@ -43,7 +42,7 @@
   .accordion__title:hover,
   .accordion__title:active,
   .accordion__title.is-active { 
-    background-color: #00aaa7;
+    background-color: rgb(145, 33, 33);
   }
   
   .accordion__title.is-active::before {
@@ -66,9 +65,13 @@
   }
   
   .accordion__content.is-open {
-    border: 1px solid #00aaa7;
+    border: 1px solid rgb(145, 33, 33);
     padding: .625em 1.5em;
     line-height: normal; /* numberに書き換える*/
     height: auto;
     opacity: 1;
+  }
+
+  .margin0 {
+    margin: 0px;
   }
