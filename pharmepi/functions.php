@@ -245,46 +245,45 @@ function bones_fonts() {
 add_action('wp_enqueue_scripts', 'bones_fonts');
 
 
-function create_post_type() {
-  $exampleSupports = [  // supports のパラメータを設定する配列（初期値だと title と editor のみ投稿画面で使える）
+function create_post_type_named_research() {
+  $supports = [  // supports のパラメータを設定する配列（初期値だと title と editor のみ投稿画面で使える）
     'title',  // 記事タイトル
     'editor',  // 記事本文
     'thumbnail',  // アイキャッチ画像
     'revisions'  // リビジョン
   ];
-  $exampleTags = array('details');
+  $tags = array('research_category');
     
     // '学会発表',
     // 'その他講演',
     // '出版物'
   // ];
-  register_post_type( 'research-details',  // カスタム投稿ID
+  register_post_type( 'research',  // カスタム投稿ID
     array(
-      'label' => '研究詳細',  // カスタム投稿名(管理画面の左メニューに表示されるテキスト)
+      'label' => '研究内容',  // カスタム投稿名(管理画面の左メニューに表示されるテキスト)
       'public' => true,  // 投稿タイプをパブリックにするか否か
       'has_archive' => true,  // アーカイブ(一覧表示)を有効にするか否か
       'menu_position' => 5,  // 管理画面上でどこに配置するか今回の場合は「投稿」の下に配置
-      'supports' => $exampleSupports,  // 投稿画面でどのmoduleを使うか的な設定
-      'taxonomies' => $exampleTags
+      'supports' => $supports,  // 投稿画面でどのmoduleを使うか的な設定
+      'taxonomies' => $tags
     )
   );
-}
-add_action( 'init', 'create_post_type' ); // アクションに上記関数をフックします
 
-function register_blog_cat_custom_post() {
-    register_taxonomy(
-        'details',
-        'research-details',
-        array(
-            'hierarchical' => true,
-            'label' => 'ブログのカテゴリ',
-            'show_ui' => true,
-            'query_var' => true,
-            'rewrite' => true,
-            'singular_label' => 'ブログのカテゴリ'
-        )
-    );
+  register_taxonomy(
+    'research_category',
+    'research',
+    array(
+        'hierarchical' => true,
+        'label' => '研究の分類',
+        'show_ui' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'singular_label' => '研究の分類'
+    )
+);
+
 }
-add_action('init', 'register_blog_cat_custom_post');
+add_action( 'init', 'create_post_type_named_research' ); // アクションに上記関数をフックします
+
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
