@@ -285,5 +285,8 @@ function create_post_type_named_research() {
 }
 add_action( 'init', 'create_post_type_named_research' ); // アクションに上記関数をフックします
 
+// 記事が404の時にコメントアウトして実行　https://gray-code.com/blog/wordpress/how-to-repair-404page/
+// global $wp_rewrite;
+// $wp_rewrite->flush_rules();
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
