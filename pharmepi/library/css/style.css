@@ -1408,6 +1408,10 @@ and more scalable.
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+.content-wrapper {
+  min-height: calc(100vh - 50px);
+}
+
 #content {
   margin-top: 1.5em; }
 
@@ -1735,7 +1739,9 @@ FOOTER STYLES
 .footer {
   clear: both;
   background-color: #323944;
-  color: #f8f9fa; }
+  color: #f8f9fa;
+  height: 50px;
+ }
 
 /*
 if you checked out the link above:
