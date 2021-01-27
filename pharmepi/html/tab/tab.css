@@ -31,7 +31,7 @@
   display:none;
 }
 .tab.is-active{
-  background:#F00;
+  background:rgb(145, 33, 33);
   color:#FFF;
   transition: all 0.2s ease-out;
   margin: 0px;
