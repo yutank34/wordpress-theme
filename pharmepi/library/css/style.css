@@ -1251,7 +1251,7 @@ body {
   font-size: 100%;
   line-height: 1.5;
   color: #5c6b80;
-  background-color: #eaedf2;
+  /* background-color: #eaedf2; */
   -webkit-font-smoothing: antialiased; }
 
 /********************
@@ -1413,18 +1413,21 @@ POSTS & CONTENT STYLES
 }
 
 #content {
-  margin-top: 1.5em; }
+  /* margin-top: 1.5em; } */
+}
 
 .hentry {
-  background-color: white;
-  border-radius: 3px;
-  border: 1px solid #cccccc; }
+  /* background-color: white; */
+  /* border-radius: 3px; */
+  /* border: 1px solid #cccccc; } */
+  }
   .hentry header {
-    border-bottom: 1px solid #f8f9fa;
+    /* border-bottom: 1px solid #f8f9fa; */
     padding: 1.5em; }
   .hentry footer {
     padding: 1.5em;
-    border-top: 1px solid #f8f9fa; }
+    /* border-top: 1px solid #f8f9fa; } */
+  }
     .hentry footer p {
       margin: 0; }
 
