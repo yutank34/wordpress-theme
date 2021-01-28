@@ -5,7 +5,51 @@
 <?php
 });
 ?>
+<?php
+				function get_accordion($category_name, $by_tags) {
+					echo '<div class="accordion__container">';
+					$tags = [ 'list' ];
+					if ($by_tags) {
+						$tags = get_tags(array('orderby' => 'name', 'order' => ''));
+					} else {
+						$tags = get_tags(array('slug' => 'list'));
+					}
+					$isFirst = true;
+					foreach ( $tags as $tag ) {
+						$tax_posts = get_posts( array(
+							'post_type' => 'post',
+							'posts_per_page' => -1, // 表示させたい記事数
+							'category_name' => $category_name,
+							'tax_query' => array(
+								array(
+								'taxonomy' => 'post_tag',
+								'terms' => array( $tag->slug ),
+								'field' => 'slug'
+								)
+							)
+						));
+						if( $tax_posts ) {
+							$titleArgs = 'accordion__title js-accordion-title';
+							$contentsArgs = 'accordion__content margin0';
+							if ($isFirst) {
+								$titleArgs = $titleArgs.' is-active';
+								$contentsArgs = $contentsArgs.' is-open';
+							}
+							$isFirst = false;
+						echo '<h4 class="'.$titleArgs.'">'.$tag->name.'</h4>';
+						echo '<ul class="'.$contentsArgs.'">';
+							foreach($tax_posts as $tax_post) {
+								echo '<li><a href="'.get_permalink($tax_post->ID).'">'.get_the_title($tax_post->ID).'</a></li>';
+							}
+						echo '</ul>';
+						}
+					}
+				echo '</div>';
+				}
+				?>
 
+
+<!-- ここから画面描画 -->
 <?php get_header(); ?>
 <main id="main" class="m-all t-2of3 wrap cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
@@ -25,46 +69,20 @@
 			</section>
 			<section class="accordion">
 				<h3>原著論文</h3>
-        		<div class="accordion__container">
-				<?php
-				$tags = get_tags(array('orderby' => 'name', 'order' => ''));
-				$isFirst = true;
-				foreach ( $tags as $tag ): ?>
-					<?php
-					$tax_posts = get_posts( array(
-						'post_type' => 'post',
-						'posts_per_page' => -1, // 表示させたい記事数
-						'tax_query' => array(
-							array(
-							'taxonomy' => 'post_tag',
-							'terms' => array( $tag->name ),
-							'field' => 'slug'
-							)
-						)
-					));
-					if( $tax_posts ) :	
-						$titleArgs = 'accordion__title js-accordion-title';
-						$contentsArgs = 'accordion__content margin0';
-						if ($isFirst) {
-							$titleArgs = $titleArgs.' is-active';
-							$contentsArgs = $contentsArgs.' is-open';
-						}
-						$isFirst = false
-				?>
-					<h4 class="<?php echo $titleArgs; ?>"><?php echo $tag->name ?></h4>
-					<ul class="<?php echo $contentsArgs; ?>">
-						<?php foreach($tax_posts as $tax_post): ?>
-							<li>
-								<a href="<?php echo get_permalink($tax_post->ID); ?>"><?php echo get_the_title($tax_post->ID); ?></a>
-							</li>
-						<?php endforeach; wp_reset_postdata(); ?>
-					</ul>
-				<?php
-				endif;
-				endforeach;
-				?>
-        		</div><!-- accordion__container -->
-      		</section><!-- /.accordion -->
+        		<?php get_accordion('paper', true); ?>
+			</section>
+			<section class="accordion">
+				<h3>学会発表</h3>
+				<?php get_accordion('conference-presentation', true); ?>
+			</section>
+			<section class="accordion">
+				<h3>その他講演</h3>
+				<?php get_accordion('other-presentation', false); ?>
+			</section>
+			<section class="accordion">
+				<h3>出版物</h3>
+				<?php get_accordion('publication', false); ?>
+      		</section>
 		</article>
 	<?php endwhile; endif; ?>
 </main>
