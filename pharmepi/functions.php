@@ -253,11 +253,7 @@ function create_post_type_named_research() {
     'revisions'  // リビジョン
   ];
   $tags = array('research_category');
-    
-    // '学会発表',
-    // 'その他講演',
-    // '出版物'
-  // ];
+
   register_post_type( 'research',  // カスタム投稿ID
     array(
       'label' => '研究内容',  // カスタム投稿名(管理画面の左メニューに表示されるテキスト)
@@ -280,10 +276,29 @@ function create_post_type_named_research() {
         'rewrite' => true,
         'singular_label' => '研究の分類'
     )
-);
-
+  );
 }
 add_action( 'init', 'create_post_type_named_research' ); // アクションに上記関数をフックします
+
+function create_post_type_named_news() {
+  $supports = [
+    'title',
+    'editor',
+    'thumbnail',
+    'revisions'
+  ];
+    
+  register_post_type( 'news',
+    array(
+      'label' => 'お知らせ',
+      'public' => true,
+      'has_archive' => true,
+      'menu_position' => 7,
+      'supports' => $supports
+    )
+  );
+}
+add_action( 'init', 'create_post_type_named_news' );
 
 // 記事が404の時にコメントアウトして実行　https://gray-code.com/blog/wordpress/how-to-repair-404page/
 // global $wp_rewrite;
