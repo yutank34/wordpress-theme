@@ -1478,6 +1478,7 @@ POSTS & CONTENT STYLES
     .entry-content tr:nth-child(even) {
       background-color: #f8f9fa; }
   .entry-content td {
+    max-width: 700px;
     padding: 7px;
     border-right: 1px solid #eaedf2; }
     .entry-content td:last-child {
