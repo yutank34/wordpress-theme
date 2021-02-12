@@ -36,24 +36,24 @@ if ($tax_posts) : ?>
 	<div id="inner-content" class="wrap cf">
 		<main id="main" class="" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 			<section class="box-container">
-				<h2>ボックスコンテナ</h2>
+				<h2>薬と患者をとりまく社会に関する研究・教育活動の実施</h2>
 				<ul>
 					<li>
 						<section class="box-description">
-							<header>タイトル</header>
-							<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+							<header>薬剤疫学研究</header>
+							<p>医薬品の適正使用や副作用リスクを評価する研究</p>
 						</section>
 					</li>
 					<li>
 						<section class="box-description">
-							<header>タイトル</header>
-							<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+							<header>薬剤経済学研究</header>
+							<p>医療の費用対効果や患者QOLを取り扱う研究</p>
 						</section>
 					</li>
 					<li>
 						<section class="box-description">
-							<header>タイトル</header>
-							<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+							<header>ヘルスサービス研究</header>
+							<p>医療機関や地域で活躍する薬剤師の役割を考える研究</p>
 						</section>
 					</li>
 				</ul>
