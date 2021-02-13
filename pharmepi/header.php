@@ -71,7 +71,7 @@
 						)); ?>
 
 					</nav>
-
+					<button type="button" onclick="location.href='https://www.my-pharm.ac.jp'">明治薬科大学HP</button>
 				</div>
 
 			</header>

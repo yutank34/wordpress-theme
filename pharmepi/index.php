@@ -28,8 +28,7 @@ if ($tax_posts) : ?>
 		<figure>
 			<img src="https://image.shutterstock.com/z/stock-photo-medicine-doctor-and-robotics-research-and-analysis-diagnose-checking-coronavirus-or-covid-1673968429.jpg" alt="" width="1024" height="500">
 			<div>
-				<h1>hoaaaaa</h1>
-				<p>aaaaaaaaaaaaaaaaaaaaa</p>
+				<h1>公衆衛生・疫学研究室</h1>
 			</div>
 		</figure>
 	</section>
@@ -38,23 +37,20 @@ if ($tax_posts) : ?>
 			<section class="box-container">
 				<h2>薬と患者をとりまく社会に関する研究・教育活動の実施</h2>
 				<ul>
-					<li>
-						<section class="box-description">
-							<header>薬剤疫学研究</header>
-							<p>医薬品の適正使用や副作用リスクを評価する研究</p>
-						</section>
+					<li class="box-description">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/icon_pc.png">
+						<p class="box-title">薬剤疫学研究</p>
+						<p>医薬品の適正使用や副作用リスクを評価する研究</p>
 					</li>
-					<li>
-						<section class="box-description">
-							<header>薬剤経済学研究</header>
-							<p>医療の費用対効果や患者QOLを取り扱う研究</p>
-						</section>
+					<li class="box-description">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/icon_economy.png">
+						<p class="box-title">薬剤経済学研究</p>
+						<p>医療の費用対効果や患者QOLを取り扱う研究</p>
 					</li>
-					<li>
-						<section class="box-description">
-							<header>ヘルスサービス研究</header>
-							<p>医療機関や地域で活躍する薬剤師の役割を考える研究</p>
-						</section>
+					<li class="box-description">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/icon_health.png">
+						<p class="box-title">ヘルスサービス研究</p>
+						<p>医療機関や地域で活躍する薬剤師の役割を考える研究</p>
 					</li>
 				</ul>
 			</section>

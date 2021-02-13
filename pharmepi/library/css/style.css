@@ -118,7 +118,7 @@ a:hover {
  */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0; }
+}
 
 /**
  * Address styling not present in IE 8/9, Safari 5, and Chrome.
@@ -298,6 +298,12 @@ legend {
  * 2. Correct font size not being inherited in all browsers.
  * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
  */
+button {
+  background-color: #8D3939;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+}
 button,
 input,
 select,
@@ -1334,7 +1340,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 
 h1, .h1 {
   font-size: 2.5em;
-  line-height: 1.333em; }
+  line-height: 1.333em;
+  margin: 0px;
+ }
 
 h2, .h2 {
   font-size: 1.75em;
@@ -1358,12 +1366,13 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 .header {
-  background-color: #323944; }
+  align-items: center;
+  background-color: white; }
 
 #logo {
-  margin: 0.75em 0; }
+  }
   #logo a {
-    color: white; }
+    color: #251715; }
 
 /*********************
 NAVIGATION STYLES
@@ -1391,7 +1400,7 @@ and more scalable.
     */ }
     .nav li a {
       display: block;
-      color: white;
+      color: #251715;
       text-decoration: none;
       padding: 0.75em;
       /*
@@ -1859,6 +1868,9 @@ you can add resource intensive styles.
   /*********************
   GENERAL STYLES
   *********************/
+  header {
+    height: 90px;
+  }
   /*********************
   LAYOUT & GRID STYLES
   *********************/

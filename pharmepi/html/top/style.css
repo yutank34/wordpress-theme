@@ -5,8 +5,6 @@
     margin: auto;
 }
 
-
-
 /* ----ヘッダー---- */
 .header-wrapper {
     background-color: darkgoldenrod;
@@ -14,7 +12,6 @@
 .header {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
 }
 
 .header-logo {
@@ -36,7 +33,7 @@
 
 /* ----スライダー---- */
 .slider {
-    height: 600px;
+    height: 428px;
 }
 .slider figure {
 	width: 100%;
@@ -55,8 +52,9 @@
 .slider div {
     position: absolute;/*絶対配置*/
     color: white;/*文字は白に*/
+    background-color: rgba(37, 23, 21, 0.5);
     top: 50%;
-    left: 50%;
+    right: 0%;
     -ms-transform: translate(-50%,-50%);
     -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
@@ -66,13 +64,15 @@
 }
 
 .slider h1 {
-    font-size: 36px;
+    font-size: 48px;
+    padding: 10px 40px;
 }
 
 
 /* ----ボックスコンテンツ---- */
 .box-container {
-    justify-content: space-between;
+    /* justify-content: center; */
+    text-align: center;
     margin: 20px;
 }
 
@@ -91,12 +91,10 @@
 .box-description {
     width: 240px;
     height: 240px;
-    background-color:burlywood;
+    margin: 0px;
 }
-.box-description header {
+.box-title {
     font-size: 20px;
-    text-align: center;
-    background-color: chocolate;
     padding: 20px;
 }
 
@@ -116,4 +114,5 @@ footer {
     background-color: darkgoldenrod;
     text-align: center;
     padding: 4px;
+
 }
