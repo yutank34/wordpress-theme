@@ -1313,13 +1313,16 @@ LAYOUT & GRID STYLES
 /*********************
 LINK STYLES
 *********************/
+.inner-header {
+  display: flex;
+}
 a, a:visited {
-  color: #f01d4f;
+  color: #8D3939;
   /* on hover */
   /* on click */
   /* mobile tap color */ }
   a:hover, a:focus, a:visited:hover, a:visited:focus {
-    color: #d10e3c; }
+    color: #8D3939; }
   a:link, a:visited:link {
     /*
     this highlights links on iPhones/iPads.

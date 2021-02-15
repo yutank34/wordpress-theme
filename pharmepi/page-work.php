@@ -38,8 +38,10 @@
 							$isFirst = false;
 						echo '<h4 class="'.$titleArgs.'">'.$tag->name.'</h4>';
 						echo '<ul class="'.$contentsArgs.'">';
+						$index = 1;
 							foreach($tax_posts as $tax_post) {
-								echo '<li><a href="'.get_permalink($tax_post->ID).'">'.get_the_title($tax_post->ID).'</a></li>';
+								echo '<li class="accordion__li">'.$index.'. '.'<a href="'.get_permalink($tax_post->ID).'">'.get_the_title($tax_post->ID).'</a></li>';
+								$index++;
 							}
 						echo '</ul>';
 						}
