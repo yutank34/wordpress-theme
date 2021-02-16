@@ -1383,6 +1383,18 @@ HEADER STYLES
     width: 180px;
   }
 
+  .header-image {
+    width: 63px;
+    height: 63px;
+    margin-right: 14px;
+  }
+
+  .header-home-link {
+    text-decoration: none;
+    color: #251715;
+    display: flex;
+  }
+
 #logo {
   }
   #logo a {
