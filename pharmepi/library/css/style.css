@@ -1373,8 +1373,15 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 .header {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  background-color: white; }
+  background-color: white;
+}
+  .header-button {
+    height: 90px;
+    width: 180px;
+  }
 
 #logo {
   }
@@ -2014,7 +2021,7 @@ you can add resource intensive styles.
   
   ******************************************************************/
   .wrap {
-    width: 1040px; } }
+    width: 1280px; } }
 /*********************
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.
