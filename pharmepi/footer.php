@@ -19,7 +19,7 @@
 						)); ?>
 					</nav>
 
-					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
+					<p class="source-org copyright">Copyright (C) 2011 明治薬科大学　公衆衛生・疫学研究室 All Rights Reserved.</p>
 
 				</div>
 

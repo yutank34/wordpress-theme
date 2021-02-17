@@ -73,9 +73,11 @@
 .box-container {
     /* justify-content: center; */
     text-align: center;
-    margin: 20px;
 }
-
+.discription {
+    /* justify-content: center; */
+    padding: 54px 110px;
+}
 
 .box-container h2 {
     font-size: 26px;
@@ -115,4 +117,8 @@ footer {
     text-align: center;
     padding: 4px;
 
+}
+
+.back-color {
+    background-color: #BEA6A0;
 }

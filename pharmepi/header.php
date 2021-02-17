@@ -50,7 +50,7 @@
 					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
 					<a href="<?php echo home_url(); ?>" rel="nofollow" class="header-home-link">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/lab_logo_t1_bk.png" class="header-image">
-						<h1 id="logo" class="homepage-name" itemscope itemtype="http://schema.org/Organization">明治薬科大学</br><?php bloginfo('name'); ?></h1>
+						<h1 id="logo" class="homepage-name" itemscope itemtype="http://schema.org/Organization"><span class="weak">明治薬科大学</span></br><?php bloginfo('name'); ?></h1>
 					</a>
 
 					<?php // if you'd like to use the site description you can un-comment it below ?>
