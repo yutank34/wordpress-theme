@@ -76,6 +76,7 @@
 										)
 									)
 								));
+								if( $tax_posts ) :
 							?>
 							<p><?php echo $childTerm->name; ?></p>
 							<ul class="margin0">
@@ -88,7 +89,7 @@
 									</li>
 								<?php endforeach; wp_reset_postdata(); ?>
 							</ul>
-							<?php endforeach; ?>
+							<?php endif; endforeach; ?>
 						</div>
 						<?php
 						endforeach;
