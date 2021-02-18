@@ -30,8 +30,9 @@
 						<ul class="tab-group">
 							<?php
 							$terms = get_terms('research_category', array(
-								'parent' => 0,
+								'parent' => 0, // 親カテゴリのみ抽出
 								'orderby' => 'description'
+								// 'parent' => $term_id で子タームを抽出できる
 							));
 							if (!empty($terms) && !is_wp_error($terms)) {
 								$isFirst = true;
@@ -52,36 +53,44 @@
 						<?php
 						$isFirst = true;
 						foreach ($terms as $term) :
-							$tax_posts = get_posts( array(
-								'post_type' => 'research',
-								'posts_per_page' => -1, // 表示させたい記事数
-								'tax_query' => array(
-									array(
-									'taxonomy' => 'research_category',
-									'terms' => array( $term->slug ),
-									'field' => 'slug',
-									'include_children' => true, //子タクソノミーを含める
-									)
-								)
-							));
-							if( $tax_posts ) :	
-								$panelArgs = 'panel tab-'.$term->term_id;
-								if ($isFirst) {
-									$panelArgs = $panelArgs.' is-show';
-								}
-								$isFirst = false
+							$childTerms = get_terms('research_category', array('parent' => $term->term_id, 'hide_empty' => false, 'orderby' => 'description'));
+							$panelArgs = 'panel tab-'.$term->term_id;
+							if ($isFirst) {
+								$panelArgs = $panelArgs.' is-show';
+							}
+							$isFirst = false
 						?>
 						<div class="<?php echo $panelArgs; ?>">
+							<p><?php echo explode('|||', $term->description, 2)[1]; ?></p>
+							<?php 
+							foreach ($childTerms as $childTerm) :
+								$tax_posts = get_posts( array(
+									'post_type' => 'research',
+									'posts_per_page' => -1, // 表示させたい記事数
+									'tax_query' => array(
+										array(
+										'taxonomy' => 'research_category',
+										'terms' => array( $childTerm->slug ),
+										'field' => 'slug',
+										'include_children' => true, //子タクソノミーを含める
+										)
+									)
+								));
+							?>
+							<p><?php echo $childTerm->name; ?></p>
 							<ul class="margin0">
-								<?php foreach($tax_posts as $tax_post): ?>
+								<?php
+								foreach($tax_posts as $tax_post):
+									$index = 1;
+								?>
 									<li>
-										<a href="<?php echo get_permalink($tax_post->ID); ?>"><?php echo get_the_title($tax_post->ID); ?></a>
+									<?php echo $index.'. '; ?><a href="<?php echo get_permalink($tax_post->ID); ?>"><?php echo get_the_title($tax_post->ID); ?></a>
 									</li>
 								<?php endforeach; wp_reset_postdata(); ?>
 							</ul>
+							<?php endforeach; ?>
 						</div>
 						<?php
-						endif;
 						endforeach;
 						?>
 					</div>
