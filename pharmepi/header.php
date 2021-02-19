@@ -45,7 +45,6 @@
 		<div id="container" class="content-wrapper">
 
 			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
-
 				<div id="inner-header" class="wrap cf header">
 					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
 					<a href="<?php echo home_url(); ?>" rel="nofollow" class="header-home-link">
