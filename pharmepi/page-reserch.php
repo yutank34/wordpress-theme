@@ -97,7 +97,10 @@
 					</div>
 				</div>
 			</section>
-			<?php // end article section ?>
+			<section>
+				<p>倫理審査委員会より情報公開が求められている研究についてはこちらで公開しております。</p>
+				<button type=“button” onclick="location.href='<?php echo home_url(); ?>/%E7%A0%94%E7%A9%B6%E5%85%AC%E9%96%8B%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6'">ページリンク</button>
+			</section>
 		</article>
 	<?php endwhile; endif; ?>
 </main>
