@@ -1322,7 +1322,7 @@ LINK STYLES
 *********************/
 #inner-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 }
 a, a:visited {
