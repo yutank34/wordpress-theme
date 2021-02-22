@@ -65,11 +65,49 @@ if ($tax_posts) : ?>
 				</div>
 				<div class="back-color">
 					<div class="wrap box-container discription">
-						<div>
-
-						</div>
+						<ul>
+							<li>
+								<div class="sub-menu">
+									<a href="<?php echo home_url(); ?>/研究室紹介">
+										<img src="<?php echo get_template_directory_uri(); ?>/assets/about_labo.jpg" alt="">
+										<div>
+											<p>研究室の紹介</p>
+										</div>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div class="sub-menu">
+									<a href="<?php echo home_url(); ?>/研究室紹介">
+										<img src="<?php echo get_template_directory_uri(); ?>/assets/about_labo.jpg" alt="">
+										<div>
+											<p>研究室の紹介</p>
+										</div>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div class="sub-menu">
+									<a href="<?php echo home_url(); ?>/研究室紹介">
+										<img src="<?php echo get_template_directory_uri(); ?>/assets/about_labo.jpg" alt="">
+										<div>
+											<p>研究室の紹介</p>
+										</div>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div class="sub-menu">
+									<a href="<?php echo home_url(); ?>/研究室紹介">
+										<img src="<?php echo get_template_directory_uri(); ?>/assets/about_labo.jpg" alt="">
+										<div>
+											<p>研究室の紹介</p>
+										</div>
+									</a>
+								</div>
+							</li>
+						</ul>
 					</div>
-
 				</div>
 		</main>
 	</div>
