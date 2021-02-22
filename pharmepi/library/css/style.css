@@ -1465,7 +1465,8 @@ POSTS & CONTENT STYLES
   }
   .hentry header {
     /* border-bottom: 1px solid #f8f9fa; */
-    padding: 1.5em; }
+    /* padding: 1.5em;  */
+  }
   .hentry footer {
     padding: 1.5em;
     /* border-top: 1px solid #f8f9fa; } */
@@ -1477,7 +1478,21 @@ POSTS & CONTENT STYLES
 .single-title,
 .page-title,
 .entry-title {
-  margin: 0; }
+  font-size: 1.5em;
+}
+
+.article-header {
+  font-size: 1.0em;
+  background-color: #C3B6B2;
+  color: #56423D;
+  padding-left: 10px;
+  height: 40px;
+  margin: 0; 
+}
+
+.article-header h1 {
+  line-height: 1.7em;
+}
 
 /* want to style individual post classes? Booya! */
 /* post by id (i.e. post-3) */

@@ -1,27 +1,28 @@
 <?php get_header(); ?>
 
-			<div id="content">
+<div id="content">
 
-				<div id="inner-content" class="wrap cf">
+	<div id="inner-content" class="cf">
 
-						<main id="main" class="m-all t-2of3 d-5of7 wrap cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+		<main id="main" class="m-all t-2of3 " role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+					<article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-								<header class="article-header">
+						<header class="article-header">
 
-									<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
+							<h1 class="page-title wrap" itemprop="headline"><?php the_title(); ?></h1>
 
-								</header> <?php // end article header ?>
+						</header> <?php // end article header 
+									?>
+						<div class="wrap">
+							<section class="entry-content cf" itemprop="articleBody">
+								<?php
+								// the content (pretty self explanatory huh)
+								the_content();
 
-								<section class="entry-content cf" itemprop="articleBody">
-									<?php
-										// the content (pretty self explanatory huh)
-										the_content();
-
-										/*
+								/*
 										 * Link Pages is used in case you have posts that are set to break into
 										 * multiple pages. You can remove this if you don't plan on doing that.
 										 *
@@ -33,29 +34,31 @@
 										 * http://gizmodo.com/5841121/google-wants-to-help-you-avoid-stupid-annoying-multiple-page-articles
 										 *
 										*/
-										wp_link_pages( array(
-											'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'bonestheme' ) . '</span>',
-											'after'       => '</div>',
-											'link_before' => '<span>',
-											'link_after'  => '</span>',
-										) );
-									?>
-								</section> <?php // end article section ?>
+								wp_link_pages(array(
+									'before'      => '<div class="page-links"><span class="page-links-title">' . __('Pages:', 'bonestheme') . '</span>',
+									'after'       => '</div>',
+									'link_before' => '<span>',
+									'link_after'  => '</span>',
+								));
+								?>
+							</section> <?php // end article section 
+										?>
 
-								<footer class="article-footer cf">
+							<footer class="article-footer cf">
 
-								</footer>
+							</footer>
 
-								<?php comments_template(); ?>
+							<?php comments_template(); ?>
+						</div>
+					</article>
 
-							</article>
+			<?php endwhile;
+			endif; ?>
 
-							<?php endwhile; endif; ?>
+		</main>
 
-						</main>
+	</div>
 
-				</div>
-
-			</div>
+</div>
 
 <?php get_footer(); ?>
