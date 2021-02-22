@@ -440,7 +440,7 @@ table {
 .clearfix, .cf, .comment-respond {
   zoom: 1; }
   .clearfix:before, .clearfix:after, .cf:before, .comment-respond:before, .cf:after, .comment-respond:after {
-    content: "";
+    /* content: ""; */
     display: table; }
   .clearfix:after, .cf:after, .comment-respond:after {
     clear: both; }
@@ -1320,8 +1320,10 @@ LAYOUT & GRID STYLES
 /*********************
 LINK STYLES
 *********************/
-.inner-header {
+#inner-header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 a, a:visited {
   color: #8D3939;
@@ -1380,9 +1382,6 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: white;
 }
   .header-button {
