@@ -79,6 +79,10 @@
     padding: 54px 110px;
 }
 
+.box-container img {
+    width: 80%;
+    height: auto;
+}
 .box-container h2 {
     font-size: 26px;
     text-align: center;
@@ -88,7 +92,13 @@
     list-style: none;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
+
+.box-container li {
+    margin-bottom: 10px;
+}
+
 
 .box-description {
     width: 240px;
@@ -110,13 +120,6 @@
 .box-description p {
     padding: 10px 20px;
     word-wrap: break-word;
-}
-
-footer {
-    background-color: darkgoldenrod;
-    text-align: center;
-    padding: 4px;
-
 }
 
 .back-color {

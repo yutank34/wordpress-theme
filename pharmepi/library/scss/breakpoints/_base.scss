@@ -20,7 +20,7 @@ body {
 	font-size: 100%;
 	line-height: 1.5;
 	color: $text-color;
-	background-color: $gray;
+	background-color: $white;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
 }
@@ -71,7 +71,7 @@ LAYOUT & GRID STYLES
 *********************/
 
 .wrap {
-	width: 96%;
+	width: 1280px;
 	margin: 0 auto;
 }
 
@@ -81,10 +81,12 @@ LINK STYLES
 
 a, a:visited {
 	color: $link-color;
-
+	text-decoration: none;
 	/* on hover */
 	&:hover, &:focus {
-		color: $link-hover;
+		// color: $link-hover;
+		text-decoration: underline;
+
 	}
 
 	/* on click */
@@ -122,7 +124,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 }
 
 h1, .h1 {
-	font-size: 2.5em;
+	font-size: 1.5em;
 	line-height: 1.333em;
 }
 
@@ -153,16 +155,36 @@ HEADER STYLES
 *********************/
 
 .header {
-	background-color: $black;
+	background-color: $white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 90px;
+
+	&__home-link {
+		height: 80%;
+		text-decoration: none!important;
+		color: $blown!important;
+		display: flex;
+	}
+
+	&__image {
+		width: auto;
+		height: 100%;
+		margin-right: 14px;
+	}
 }
 
 	#logo {
-		margin: 0.75em 0;
+		// margin: 0.75em 0;
 
 		a {
-			color: $white;
+			// color: $white;
 		}
 	}
+
+
+	
 
 /*********************
 NAVIGATION STYLES
@@ -184,7 +206,7 @@ and more scalable.
 
 		a {
 			display: block;
-			color: $white;
+			color: $blown;
 			text-decoration: none;
 			padding: 0.75em;
 
@@ -195,9 +217,11 @@ and more scalable.
 			keep this file as small as possible!
 			*/
 			&:hover, &:focus {
-
+				color: $key-color;
 			}
 		}
+
+		
 
 		&:first-child {}
 
@@ -219,7 +243,9 @@ and more scalable.
 					padding-left: 30px;
 
 					&:hover,
-					&:focus {}
+					&:focus {
+						color: $key-color;
+					}
 
 					&:link {}
 
@@ -252,23 +278,23 @@ POSTS & CONTENT STYLES
 *********************/
 
 #content {
-	margin-top: 1.5em;
+	// margin-top: 1.5em;
 }
 
 		.hentry {
-			background-color: $white;
-			border-radius: 3px;
+			// background-color: $white;
+			// border-radius: 3px;
 			margin-bottom: 1.5em;
-			border: 1px solid $border-color;
+			// border: 1px solid $border-color;
 
 			header {
-				border-bottom: 1px solid $light-gray;
-				padding: 1.5em;
+				// border-bottom: 1px solid $light-gray;
+				// padding: 1.5em;
 			}
 
 			footer {
 				padding: 1.5em;
-				border-top: 1px solid $light-gray;
+				// border-top: 1px solid $light-gray;
 
 				p {
 					margin: 0;
@@ -277,9 +303,23 @@ POSTS & CONTENT STYLES
 
 		} /* end .hentry */
 
+		.article-header {
+			font-size: 1.0em;
+			background-color: $salmon;
+			color: $blown;
+			padding-left: 10px;
+			height: 40px;
+			margin: 0;
+
+			h1 {
+				line-height: 1.7em;
+			}
+		}
+		
 		.single-title,
 		.page-title,
 		.entry-title {
+			font-size: 1.5em;
 			margin: 0;
 		}
 
@@ -362,6 +402,7 @@ POSTS & CONTENT STYLES
 			}
 
 			td {
+				max-width: 700px;
 				padding: 7px;
 				border-right: 1px solid $gray;
 
@@ -383,7 +424,7 @@ POSTS & CONTENT STYLES
 			blockquote {
 				margin: 0 0 1.5em 0.75em;
 				padding: 0 0 0 0.75em;
-				border-left: 3px solid $blue;
+				border-left: 3px solid $key-color;
 				font-style: italic;
 				color: $meta-gray;
 
@@ -488,6 +529,9 @@ POSTS & CONTENT STYLES
 		margin: 0;
 	}
 
+.content-wrapper {
+	min-height: calc(100vh - 50px);
+}
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
@@ -527,10 +571,10 @@ PAGE NAVI STYLES
       padding: 0.75em;
       min-width: 1em;
       display: block;
-      color: $blue;
+      color: $key-color;
 
       &:hover, &:focus {
-      	background-color: $blue;
+      	background-color: $key-color;
       	color: $white;
       }
     }
@@ -734,7 +778,7 @@ COMMENT STYLES
 
 	/* comment reply link */
 	.comment-reply-link {
-		@extend .blue-btn;
+		@extend .main-btn;
 		font-size: 0.9em;
 		float: right;
 
@@ -790,7 +834,7 @@ COMMENT FORM STYLES
 
 	/* comment submit button */
 	#submit {
-		@extend .blue-btn;
+		@extend .main-btn;
 		float: right;
 		font-size: 1em;
 	}
@@ -862,8 +906,11 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
-	background-color: $black;
-	color: $light-gray;
+	background-color: $wine-red;
+	color: $white;
+	height: 65px;
+	text-align: center;
+    padding: 4px;
 }
 
 	/*

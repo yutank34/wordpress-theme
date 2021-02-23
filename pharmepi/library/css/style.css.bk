@@ -1,7 +1,7 @@
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
-Site Name:
-Author:
+Site Name: pharmepi
+Author: yutank34
 
 Stylesheet: Main Stylesheet
 
@@ -117,8 +117,18 @@ a:hover {
  * contexts in Firefox 4+, Safari 5, and Chrome.
  */
 h1 {
-  font-size: 2em;
-  margin: 0; }
+  font-size: 1.5em;
+}
+
+.homepage-name {
+  font-size: 1.5em;
+  color: #251715;
+}
+
+.weak {
+  font-size: 0.8em;
+  color: #685E5D;
+}
 
 /**
  * Address styling not present in IE 8/9, Safari 5, and Chrome.
@@ -298,6 +308,12 @@ legend {
  * 2. Correct font size not being inherited in all browsers.
  * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
  */
+button {
+  background-color: #8D3939;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+}
 button,
 input,
 select,
@@ -424,6 +440,7 @@ table {
 .clearfix, .cf, .comment-respond {
   zoom: 1; }
   .clearfix:before, .clearfix:after, .cf:before, .comment-respond:before, .cf:after, .comment-respond:after {
+    /* content: ""; */
     display: table; }
   .clearfix:after, .cf:after, .comment-respond:after {
     clear: both; }
@@ -437,8 +454,8 @@ span.amp {
   font-style: italic; }
 
 /******************************************************************
-Site Name:
-Author:
+Site Name: pharmepi
+Author: yutank34
 
 Stylesheet: Variables
 
@@ -459,8 +476,8 @@ use color variables properly:
 http://sachagreif.com/sass-color-variables/
 */
 /******************************************************************
-Site Name:
-Author:
+Site Name: pharmepi
+Author: yutank34
 
 Stylesheet: Typography
 
@@ -509,23 +526,26 @@ some nice typographical defaults
 more here: http://www.newnet-soft.com/blog/csstypography
 */
 p {
-  -ms-word-wrap: break-word;
+  -ms-word-break: break-all;
+  -ms-word-wrap: break-all;
   word-break: break-word;
-  word-wrap: break-word;
+  word-break: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   hyphens: auto;
   -webkit-hyphenate-before: 2;
   -webkit-hyphenate-after: 3;
-  hyphenate-lines: 3; }
-
-.weak-text {
-  font-size: 0.8em;
-  color: #685E5D; }
+  hyphenate-lines: 3;
+  /* -webkit-font-feature-settings: "liga", "dlig";
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga", "dlig"; } */
+}
 
 /******************************************************************
-Site Name:
-Author:
+Site Name: pharmepi
+Author: yutank34
 
 Stylesheet: Sass Functions
 
@@ -569,7 +589,7 @@ both compile to:
 width: 65%;
 *********************/
 /******************************************************************
-Site Name:
+Site Name: pharmepi
 Author:
 
 Stylesheet: Mixins Stylesheet
@@ -611,7 +631,7 @@ BOX SIZING
 /* NOTE: value of "padding-box" is only supported in Gecko. So
 probably best not to use it. I mean, were you going to anyway? */
 /******************************************************************
-Site Name:
+Site Name: pharmepi
 Author:
 
 Stylesheet: Grid Stylesheet
@@ -808,7 +828,8 @@ them however you see fit.
 
   .d-5of7 {
     float: left;
-    padding-right: 0.75em; }
+    padding-right: 0.75em;
+    }
 
   .d-6of7 {
     float: left;
@@ -847,7 +868,7 @@ I mean, you can do whatever you want. The world is your oyster. Unless
 you hate oysters, then the world is your peanut butter & jelly sandwich.
 *********************/
 /******************************************************************
-Site Name:
+Site Name: pharmepi
 Author:
 
 Stylesheet: Alert Styles
@@ -878,7 +899,7 @@ you can just remove this stylesheet.
   background: #e6efc2; }
 
 /******************************************************************
-Site Name:
+Site Name: pharmepi
 Author:
 
 Stylesheet: Button Styles
@@ -901,25 +922,26 @@ Here's a quick video to show how it works:
 http://www.youtube.com/watch?v=hwdVpKiJzac
 
 *********************/
-.main-btn, .header-btn, .comment-reply-link, #submit {
+.blue-btn, .comment-reply-link, #submit {
   display: inline-block;
   position: relative;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-decoration: none;
-  color: #fff;
-  font-size: 1em;
-  line-height: 2;
+  color: white;
+  font-size: 0.9em;
+  font-size: 34px;
+  line-height: 34px;
   font-weight: normal;
-  padding: 8px 24px;
-  border: none;
+  padding: 0 24px;
+  border-radius: 4px;
+  border: 0;
   cursor: pointer;
   -webkit-transition: background-color 0.14s ease-in-out;
   transition: background-color 0.14s ease-in-out; }
-  .main-btn:hover, .header-btn:hover, .comment-reply-link:hover, #submit:hover, .main-btn:focus, .header-btn:focus, .comment-reply-link:focus, #submit:focus {
-    color: #fff;
-    text-decoration: none;
-    outline: none; }
-  .main-btn:active, .header-btn:active, .comment-reply-link:active, #submit:active {
+  .blue-btn:hover, .comment-reply-link:hover, #submit:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus {
+    color: white;
+    text-decoration: none; }
+  .blue-btn:active, .comment-reply-link:active, #submit:active {
     top: 1px; }
 
 /*
@@ -927,18 +949,15 @@ An example button.
 You can use this example if you want. Just replace all the variables
 and it will create a button dependant on those variables.
 */
-.main-btn, .header-btn, .comment-reply-link, #submit {
-  background-color: #8D3939; }
-  .main-btn:hover, .header-btn:hover, .comment-reply-link:hover, #submit:hover, .main-btn:focus, .header-btn:focus, .comment-reply-link:focus, #submit:focus {
-    background-color: #7e3333; }
-  .main-btn:active, .header-btn:active, .comment-reply-link:active, #submit:active {
-    background-color: #7b3232; }
-
-.header-btn {
-  height: 100%; }
+.blue-btn, .comment-reply-link, #submit {
+  background-color: #2980b9; }
+  .blue-btn:hover, .comment-reply-link:hover, #submit:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus {
+    background-color: #2574a8; }
+  .blue-btn:active, .comment-reply-link:active, #submit:active {
+    background-color: #2472a4; }
 
 /******************************************************************
-Site Name:
+Site Name: pharmepi
 Author:
 
 Stylesheet: Form Styles
@@ -976,11 +995,11 @@ textarea,
 .field {
   display: block;
   height: 40px;
-  line-height: 1em;
+  line-height: 40px;
   padding: 0 12px;
   margin-bottom: 14px;
   font-size: 1em;
-  color: #251715;
+  color: #5c6b80;
   border-radius: 3px;
   vertical-align: middle;
   box-shadow: none;
@@ -1024,8 +1043,7 @@ textarea,
   textarea:active,
   .field:focus,
   .field:active {
-    background-color: #f7f8fa;
-    outline: none; }
+    background-color: #f7f8fa; }
   input[type="text"].error, input[type="text"].is-invalid,
   input[type="password"].error,
   input[type="password"].is-invalid,
@@ -1061,7 +1079,7 @@ textarea,
   .field.is-invalid {
     color: #fbe3e4;
     border-color: #fbe3e4;
-    background-color: #fff;
+    background-color: white;
     background-position: 99% center;
     background-repeat: no-repeat;
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2NDM0NDREQkYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2NDM0NDREQ0YwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQ3ODRGRkE2RjA0QTExRTI5MjhERkZBMTMzMDYwNzI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjY0MzQ0NERBRjA0QjExRTI5MjhERkZBMTMzMDYwNzI2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+U8iT5wAAAedJREFUeNqk1U9I02Ecx/HtV3aIFAc1hcRDUoGXRAq0oNLA2CrsEFmHbikZu0iQYIFGYAiegkCpLipBxPpDEBMUzB0EhSG2LhG7hMR2GviPgUTvB57Bw8P3+U23B16HPX8+e/b8nt93wezZSMCnhXETF3AcB5BDCnH8Dq98ExcGHcFn8Ah3cdDni+fxnPDv9oAnTB7CKu6VCFXtChZy56LxUjt+jfuB8toSOth9wd7xWAWhqrUjYR/FRTwWJm+iIPT/w7bQf5ljiZnBg45dtKFX6H+LU8gIY8OEV6vgTkStwXWE8BPTGDHGPqNPz2mCfSOOYkA99TvCt1bhGPL68zMcwmncMuape10jrI+q4BbHi/FLn31S9z2x5tRhTc+1W506ipM+T3oRD4X+8+qtc4SqFvL0z/Fr14S+Szjis8bz9Lvvaq8cwS/wwGfdlqfPSWqTiFlX77o13u9Ym1PBs8JAytpRoy44X9Ft9E/gvbA+rYKn8NcaaMVc8UHgBw4b9/iqUQZ6hOAJFbyDcUflmsEX4a6+wTtHGfhAIUqa1U29Zc2BytouThD8x6xuN5CtMPi2CrXLZkZf/HyZoRFCP7n+QVR4PV7uI/AjGghN7OU/r1ilnqILtfpNC+o6vIFljBKYlhb/F2AAgaBsWR5wRiIAAAAASUVORK5CYII=);
@@ -1101,7 +1119,7 @@ textarea,
   .field.is-valid {
     color: #e6efc2;
     border-color: #e6efc2;
-    background-color: #fff;
+    background-color: white;
     background-position: 99% center;
     background-repeat: no-repeat;
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2NDM0NDRERkYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2NDM0NDRFMEYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjY0MzQ0NERERjA0QjExRTI5MjhERkZBMTMzMDYwNzI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjY0MzQ0NERFRjA0QjExRTI5MjhERkZBMTMzMDYwNzI2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+7olkTQAAAfhJREFUeNqklU9oE0EUhzdroWjw0tBeWlDxkEaIp55TsCU9VKIgCrHBelA8CQ1Kr1WPbZrQ3gqtQqvGqxpQc2jBk6BIIaAGD4qNCKURpDSKiPi98gLDsJt//uBjsztvfnk7895sIPAw6/joGMThFJyAXn2+A+9gA57/TaY/eU0OeBgfhGm4DiGnsb7DAszxBz/NAdcKjMJLuNWCqagHbsscN5+L+hmH4QkMOe1L5jzFfNA2PgT34ajTuY7AGuZB0/hmh5m+gS0r8xv1zRvg+gGCHZiOwnF4DP3iB3sQkYxPd2C6CWfhB9Xwlus5+K1j4jXuaq3a+gM1H9OPcAa+7q9lPidZJqHbiIm7Wg22rsEI7FrPSzAMX/T+ADyAKSsu7Fr1KplehLvwCs5DvfBf65p+MypqRbO1FXK9utH4/QKuaqYTsG3E3INJv00Q46px3+XxanJ/Ute2/vqP4FKDza2KcdljIKdnhS0xXYULTaqmLMZFn8FFSFtvt6x70ExFCS5oUXspq2ssa7oEl1swFa+CGFdgtkHgPDyDKy02zyxNU6lXRUZb1EuHYayNNs+Yh5B0WQo+/8fpJnNTZFuzz2OpjoQ2QruSOQlMy35fEGmEGMxY9e1brxobw7TkWA1h6xfckUPb+JhGoE/Hpfvew7qUld/H9J8AAwDpw3WYrxcZ3QAAAABJRU5ErkJggg==);
@@ -1220,8 +1238,6 @@ textarea {
 select {
   -webkit-appearance: none;
   /* 1 */
-  -moz-appearance: none;
-  appearance: none;
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAHCAYAAADXhRcnAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpEOEZCMjYxMEYwNUUxMUUyOTI4REZGQTEzMzA2MDcyNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpEOEZCMjYxMUYwNUUxMUUyOTI4REZGQTEzMzA2MDcyNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkQ4RkIyNjBFRjA1RTExRTI5MjhERkZBMTMzMDYwNzI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkQ4RkIyNjBGRjA1RTExRTI5MjhERkZBMTMzMDYwNzI2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Vxkp9gAAAI9JREFUeNpidHFxucHAwKAOxE+AmJmBMPgLxDJAfJMFSKwD4kqoAClgA+P///8ZXF1dPaCGcBKh6QcQB+3evXs7WDMIAA2QB1I7gFgDj0aQFz2BGh+AOEwwUaDAQyBlCMR7cGjcC5KHaQQBuM3IAOiKTiBVhiTUDdRUhq4Oq2aoAelAahIQ5wM1zsCmBiDAADhYMJXVZ9u9AAAAAElFTkSuQmCC);
   background-repeat: no-repeat;
   background-position: 97.5% center; }
@@ -1233,7 +1249,7 @@ you set a great foundation, you won't need to add too many styles in
 the other stylesheets. Remember, keep it light: Speed is Important.
 *********************/
 /******************************************************************
-Site Name:
+Site Name: pharmepi
 Author:
 
 Stylesheet: Base Mobile Stylesheet
@@ -1252,9 +1268,8 @@ body {
   font-size: 100%;
   line-height: 1.5;
   color: #251715;
-  background-color: #fff;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  /* background-color: #eaedf2; */
+  -webkit-font-smoothing: antialiased; }
 
 /********************
 WORDPRESS BODY CLASSES
@@ -1299,20 +1314,24 @@ style a page via class
 LAYOUT & GRID STYLES
 *********************/
 .wrap {
-  width: 1280px;
+  width: 96%;
   margin: 0 auto; }
 
 /*********************
 LINK STYLES
 *********************/
+#inner-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 a, a:visited {
   color: #8D3939;
-  text-decoration: none;
   /* on hover */
   /* on click */
   /* mobile tap color */ }
   a:hover, a:focus, a:visited:hover, a:visited:focus {
-    text-decoration: underline; }
+    color: #8D3939; }
   a:link, a:visited:link {
     /*
     this highlights links on iPhones/iPads.
@@ -1336,8 +1355,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
     text-decoration: none; }
 
 h1, .h1 {
-  font-size: 1.5em;
-  line-height: 1.333em; }
+  font-size: 2.5em;
+  line-height: 1.333em;
+  margin: 0px;
+ }
 
 h2, .h2 {
   font-size: 1.75em;
@@ -1361,20 +1382,29 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 .header {
-  background-color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 90px; }
-  .header__home-link {
-    height: 80%;
-    text-decoration: none !important;
-    color: #251715 !important;
-    display: flex; }
-  .header__image {
-    width: auto;
-    height: 100%;
-    margin-right: 14px; }
+  background-color: white;
+}
+  .header-button {
+    height: 90px;
+    width: 180px;
+  }
+
+  .header-image {
+    width: 63px;
+    height: 63px;
+    margin-right: 14px;
+  }
+
+  .header-home-link {
+    text-decoration: none;
+    color: #251715;
+    display: flex;
+  }
+
+#logo {
+  }
+  #logo a {
+    color: #251715; }
 
 /*********************
 NAVIGATION STYLES
@@ -1411,43 +1441,57 @@ and more scalable.
       the style.scss file where it's relevant. We want to
       keep this file as small as possible!
       */ }
-      .nav li a:hover, .nav li a:focus {
-        color: #8D3939; }
     .nav li ul.sub-menu li a,
     .nav li ul.children li a {
       padding-left: 30px; }
-      .nav li ul.sub-menu li a:hover, .nav li ul.sub-menu li a:focus,
-      .nav li ul.children li a:hover,
-      .nav li ul.children li a:focus {
-        color: #8D3939; }
 
 /* end .nav */
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+.content-wrapper {
+  min-height: calc(100vh - 50px);
+}
+
+#content {
+  /* margin-top: 1.5em; } */
+}
+
 .hentry {
-  margin-bottom: 1.5em; }
+  /* background-color: white; */
+  /* border-radius: 3px; */
+  /* border: 1px solid #cccccc; } */
+  }
+  .hentry header {
+    /* border-bottom: 1px solid #f8f9fa; */
+    /* padding: 1.5em;  */
+  }
   .hentry footer {
-    padding: 1.5em; }
+    padding: 1.5em;
+    /* border-top: 1px solid #f8f9fa; } */
+  }
     .hentry footer p {
       margin: 0; }
 
 /* end .hentry */
-.article-header {
-  font-size: 1.0em;
-  background-color: #BEA6A0;
-  color: #251715;
-  padding-left: 10px;
-  height: 40px;
-  margin: 0; }
-  .article-header h1 {
-    line-height: 1.7em; }
-
 .single-title,
 .page-title,
 .entry-title {
   font-size: 1.5em;
-  margin: 0; }
+}
+
+.article-header {
+  font-size: 1.0em;
+  background-color: #C3B6B2;
+  color: #56423D;
+  padding-left: 10px;
+  height: 40px;
+  margin: 0; 
+}
+
+.article-header h1 {
+  line-height: 1.7em;
+}
 
 /* want to style individual post classes? Booya! */
 /* post by id (i.e. post-3) */
@@ -1504,7 +1548,7 @@ POSTS & CONTENT STYLES
   .entry-content blockquote {
     margin: 0 0 1.5em 0.75em;
     padding: 0 0 0 0.75em;
-    border-left: 3px solid #8D3939;
+    border-left: 3px solid #2980b9;
     font-style: italic;
     color: #9fa6b4; }
   .entry-content dd {
@@ -1553,9 +1597,6 @@ POSTS & CONTENT STYLES
 .tags {
   margin: 0; }
 
-.content-wrapper {
-  min-height: calc(100vh - 50px); }
-
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
@@ -1567,7 +1608,7 @@ PAGE NAVI STYLES
   text-align: center; }
   .pagination ul {
     display: inline-block;
-    background-color: #fff;
+    background-color: white;
     white-space: nowrap;
     padding: 0;
     clear: both;
@@ -1589,16 +1630,16 @@ PAGE NAVI STYLES
     padding: 0.75em;
     min-width: 1em;
     display: block;
-    color: #8D3939; }
+    color: #2980b9; }
     .pagination a:hover, .pagination a:focus, .pagination span:hover, .pagination span:focus {
-      background-color: #8D3939;
-      color: #fff; }
+      background-color: #2980b9;
+      color: white; }
   .pagination .current {
     cursor: default;
-    color: #251715; }
+    color: #5c6b80; }
     .pagination .current:hover, .pagination .current:focus {
-      background-color: #fff;
-      color: #251715; }
+      background-color: white;
+      color: #5c6b80; }
 
 /* end .bones_page_navi */
 /* fallback previous & next links */
@@ -1669,7 +1710,7 @@ COMMENT STYLES
     margin-left: 7px;
     padding: 7px; }
   .comment.odd {
-    background-color: #fff; }
+    background-color: white; }
   .comment.even {
     background: #f8f9fa; }
 
@@ -1709,7 +1750,7 @@ COMMENT FORM STYLES
   font-style: italic;
   margin: 0; }
   .logged-in-as a {
-    color: #251715; }
+    color: #5c6b80; }
 
 .comment-form-comment {
   margin: 1.5em 0 0.75em; }
@@ -1745,10 +1786,10 @@ SIDEBARS & ASIDES
   /* deep nesting */ }
 
 .no-widgets {
-  background-color: #fff;
+  background-color: white;
   padding: 1.5em;
   text-align: center;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border-radius: 2px;
   margin-bottom: 1.5em; }
 
@@ -1758,10 +1799,9 @@ FOOTER STYLES
 .footer {
   clear: both;
   background-color: #8D3939;
-  color: #fff;
+  color: #f8f9fa;
   height: 65px;
-  text-align: center;
-  padding: 4px; }
+ }
 
 /*
 if you checked out the link above:
@@ -1781,7 +1821,7 @@ tweeners.
 *********************/
 @media only screen and (min-width: 481px) {
   /******************************************************************
-  Site Name:
+  Site Name: pharmepi
   Author:
   
   Stylesheet: 481px and Up Stylesheet
@@ -1860,7 +1900,7 @@ you can add resource intensive styles.
 *********************/
 @media only screen and (min-width: 768px) {
   /******************************************************************
-  Site Name:
+  Site Name: pharmepi
   Author:
   
   Stylesheet: Tablet & Small Desktop Stylesheet
@@ -1875,6 +1915,9 @@ you can add resource intensive styles.
   /*********************
   GENERAL STYLES
   *********************/
+  header {
+    height: 90px;
+  }
   /*********************
   LAYOUT & GRID STYLES
   *********************/
@@ -1909,7 +1952,7 @@ you can add resource intensive styles.
         has the possibility of being a mobile device.
         */ }
         .nav li a:hover, .nav li a:focus {
-          color: #8D3939;
+          color: white;
           text-decoration: underline; }
       .nav li ul.sub-menu,
       .nav li ul.children {
@@ -2001,7 +2044,7 @@ you can add resource intensive styles.
 *********************/
 @media only screen and (min-width: 1030px) {
   /******************************************************************
-  Site Name:
+  Site Name: pharmepi
   Author:
   
   Stylesheet: Desktop Stylsheet
@@ -2011,24 +2054,24 @@ you can add resource intensive styles.
   
   ******************************************************************/
   .wrap {
-    width: 1020px; } }
+    width: 1280px;
+    margin: 0 auto;
+   } }
 /*********************
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.
 *********************/
 @media only screen and (min-width: 1240px) {
   /******************************************************************
-  Site Name: 
-  Author: 
+  Site Name: pharmepi 
+  Author: yutank34
   
   Stylesheet: Super Large Monitor Stylesheet
   
   You can add some advanced styles here if you like. This kicks in
   on larger screens.
   
-  ******************************************************************/
-  .wrap {
-    width: 1280px; } }
+  ******************************************************************/ }
 /*********************
 RETINA (2x RESOLUTION DEVICES)
 This applies to the retina iPhone (4s) and iPad (2,3) along with
@@ -2037,8 +2080,8 @@ query for retina AND a certain size if you want. Go Nuts.
 *********************/
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   /******************************************************************
-  Site Name: 
-  Author: 
+  Site Name: pharmepi 
+  Author: yutank34
   
   Stylesheet: Retina Screens & Devices Stylesheet
   
@@ -2084,7 +2127,7 @@ be set to display none.
 *********************/
 @media print {
   /******************************************************************
-  Site Name:
+  Site Name: pharmepi
   Author:
   
   Stylesheet: Print Stylesheet
@@ -2143,5 +2186,3 @@ be set to display none.
   .respond-form,
   nav {
     display: none; } }
-
-/*# sourceMappingURL=style.css.map */

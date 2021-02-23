@@ -44,10 +44,11 @@ body#tinymce.wp-editor {
 
 	a, a:visited {
 		color: $link-color;
-
+		text-decoration: none;
 		/* on hover */
 		&:hover, &:focus {
-			color: $link-hover;
+			color: $link-color;
+			text-decoration: underline;
 		}
 
 		/* on click */
@@ -149,7 +150,7 @@ body#tinymce.wp-editor {
 		blockquote {
 			margin: 0 0 1.5em 0.75em;
 			padding: 0 0 0 0.75em;
-			border-left: 3px solid $blue;
+			border-left: 3px solid $key-color;
 			font-style: italic;
 			color: $meta-gray;
 

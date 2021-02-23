@@ -27,17 +27,18 @@ $white:             #fff;
 
 $light-gray:        #f8f9fa;
 $gray:              #eaedf2;
-$text-color:        #5c6b80;
+$blown:             #251715;
+$light-blown:       #685E5D;
+$salmon:            #BEA6A0;
 $meta-gray:         #9fa6b4;
 
-$tan:               #eceee5;
 
-$green:             #7dd667;
+$wine-red:          #8D3939;
 
-$bones-pink:        #f01d4f;
-$blue:              #2980b9;
+$key-color:         $wine-red;
+$text-color:        $blown;
 
-$link-color:        $bones-pink;
+$link-color:        $wine-red;
 $link-hover:        darken($link-color, 9%);
 
 $border-color:      #ccc;

@@ -118,7 +118,7 @@ a:hover {
 
 h1 {
     font-size: 2em;
-    margin: 0.67em 0;
+    margin: 0;
 }
 
 /**
@@ -486,7 +486,7 @@ table {
 // Contain floats: nicolasgallagher.com/micro-clearfix-hack/
 .clearfix, .cf {
   zoom: 1;
-    &:before, &:after { content: ""; display: table; }
+    &:before, &:after { display: table; }
     &:after { clear: both; }
 }
 
