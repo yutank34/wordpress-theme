@@ -38,17 +38,17 @@ if ($tax_posts) : ?>
 				<h2>薬と患者をとりまく社会に関する研究・教育活動の実施</h2>
 				<ul>
 					<li class="box-description">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/icon_pc.png">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/icon_pc.png" class="box-container__icon">
 						<p class="box-title">薬剤疫学研究</p>
 						<p>医薬品の適正使用や副作用リスクを評価する研究</p>
 					</li>
 					<li class="box-description">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/icon_economy.png">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/icon_economy.png" class="box-container__icon">
 						<p class="box-title">薬剤経済学研究</p>
 						<p>医療の費用対効果や患者QOLを取り扱う研究</p>
 					</li>
 					<li class="box-description">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/icon_health.png">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/icon_health.png" class="box-container__icon">
 						<p class="box-title">ヘルスサービス研究</p>
 						<p>医療機関や地域で活躍する薬剤師の役割を考える研究</p>
 					</li>
@@ -61,7 +61,7 @@ if ($tax_posts) : ?>
 			</div>
 			<div>
 				<div class="wrap box-container">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/labo-description.jpg">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/labo-description.jpg" class="box-container__img--large">
 				</div>
 				<div class="back-color">
 					<div class="wrap box-container discription">

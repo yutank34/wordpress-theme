@@ -79,9 +79,14 @@
     padding: 54px 110px;
 }
 
-.box-container img {
+.box-container__img--large {
     width: 80%;
     height: auto;
+}
+
+.box-container__icon {
+    height: 70px;
+    width: auto;
 }
 .box-container h2 {
     font-size: 26px;

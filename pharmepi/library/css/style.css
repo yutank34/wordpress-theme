@@ -157,7 +157,8 @@ p {
   -webkit-hyphens: auto;
   -epub-hyphens: auto;
   -moz-hyphens: auto;
-  hyphens: auto; }
+  hyphens: auto;
+  margin: 0; }
 
 /*
  * Addresses margins set differently in IE6/7.
@@ -1761,7 +1762,8 @@ FOOTER STYLES
   color: #fff;
   height: 65px;
   text-align: center;
-  padding: 4px; }
+  padding: 4px;
+  line-height: 60px; }
 
 /*
 if you checked out the link above:
@@ -1879,7 +1881,8 @@ you can add resource intensive styles.
   LAYOUT & GRID STYLES
   *********************/
   .wrap {
-    width: 760px; }
+    width: 760px;
+    margin: 0 auto; }
 
   /*********************
   HEADER STYLES
@@ -2011,7 +2014,8 @@ you can add resource intensive styles.
   
   ******************************************************************/
   .wrap {
-    width: 1020px; } }
+    width: 1020px;
+    margin: 0 auto; } }
 /*********************
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.
@@ -2028,7 +2032,8 @@ This is for the larger monitors and possibly full screen viewers.
   
   ******************************************************************/
   .wrap {
-    width: 1280px; } }
+    width: 1280px;
+    margin: 0 auto; } }
 /*********************
 RETINA (2x RESOLUTION DEVICES)
 This applies to the retina iPhone (4s) and iPad (2,3) along with
