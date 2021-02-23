@@ -68,7 +68,7 @@ if ($tax_posts) : ?>
 						<ul>
 							<li>
 								<div class="sub-menu">
-									<a href="<?php echo home_url(); ?>/研究室紹介">
+									<a href="<?php echo home_url(); ?>/labo">
 										<img src="<?php echo get_template_directory_uri(); ?>/assets/about_labo.jpg" alt="">
 										<div>
 											<p>研究室の紹介</p>
@@ -78,30 +78,30 @@ if ($tax_posts) : ?>
 							</li>
 							<li>
 								<div class="sub-menu">
-									<a href="<?php echo home_url(); ?>/研究室紹介">
-										<img src="<?php echo get_template_directory_uri(); ?>/assets/about_labo.jpg" alt="">
+									<a href="<?php echo home_url(); ?>/reserch">
+										<img src="<?php echo get_template_directory_uri(); ?>/assets/stock-photo-book-in-library-with-open-textbook-education-learning-concept-1274296330.jpg" alt="">
 										<div>
-											<p>研究室の紹介</p>
+											<p>研究内容の紹介</p>
 										</div>
 									</a>
 								</div>
 							</li>
 							<li>
 								<div class="sub-menu">
-									<a href="<?php echo home_url(); ?>/研究室紹介">
-										<img src="<?php echo get_template_directory_uri(); ?>/assets/about_labo.jpg" alt="">
+									<a href="<?php echo home_url(); ?>/work">
+										<img src="<?php echo get_template_directory_uri(); ?>/assets/stock-photo-speaker-giving-a-talk-in-conference-hall-at-business-event-audience-at-the-conference-hall-1117902230.jpg" alt="">
 										<div>
-											<p>研究室の紹介</p>
+											<p>研究業績の紹介</p>
 										</div>
 									</a>
 								</div>
 							</li>
 							<li>
 								<div class="sub-menu">
-									<a href="<?php echo home_url(); ?>/研究室紹介">
-										<img src="<?php echo get_template_directory_uri(); ?>/assets/about_labo.jpg" alt="">
+									<a href="<?php echo home_url(); ?>/links">
+										<img src="<?php echo get_template_directory_uri(); ?>/assets/stock-photo-smart-city-and-iot-internet-of-things-concept-ict-information-communication-technology-1160793658.jpg" alt="">
 										<div>
-											<p>研究室の紹介</p>
+											<p>リンク</p>
 										</div>
 									</a>
 								</div>
