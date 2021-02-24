@@ -1033,6 +1033,7 @@ TOP
 	&__image--large {
 		width: 70%;
     	height: auto;
+		margin-top: 54px;
 	}
 
 	&__text--header {
@@ -1253,6 +1254,6 @@ ACCORDION
 }
 
 .list__link {
-	display: inline-block;
+	display: flex;
 	margin-top: 5px;
 }
