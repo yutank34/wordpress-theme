@@ -1840,21 +1840,28 @@ TOP
     padding: 10px 40px; }
 
 .box-container {
-  text-align: center; }
+  text-align: center;
+  margin-top: 40px; }
+  .box-container__header {
+    margin-top: 40px; }
   .box-container__text--discription {
     padding: 54px 110px; }
   .box-container__image--large {
-    width: 80%;
+    width: 70%;
     height: auto; }
   .box-container__text--header {
     font-size: 26px;
     text-align: center; }
 
+.navi {
+  padding: 34px 20px 54px 20px; }
+
 .inner-items {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  padding: 20px; }
+  padding: 20px;
+  margin-top: 20px; }
   .inner-items__item {
     margin-bottom: 10px; }
     .inner-items__item--icon {
@@ -1862,10 +1869,10 @@ TOP
       height: 70px; }
     .inner-items__item--title {
       font-size: 20px;
-      padding: 20px; }
+      margin-top: 10px; }
     .inner-items__item--discription {
       width: 240px;
-      margin: 0px; }
+      margin-top: 5px; }
   .inner-items__submenu {
     width: 240px;
     height: 170px;

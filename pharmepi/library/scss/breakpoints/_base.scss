@@ -1020,13 +1020,18 @@ TOP
 
 .box-container {
 	text-align: center;
+	margin-top: 40px;
+
+	&__header {
+		margin-top: 40px;
+	}
 
 	&__text--discription {
 		padding: 54px 110px;
 	}
 
 	&__image--large {
-		width: 80%;
+		width: 70%;
     	height: auto;
 	}
 
@@ -1036,11 +1041,16 @@ TOP
 	}
 }
 
+.navi {
+	padding: 34px 20px 54px 20px;
+}
+
 .inner-items {
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
 	padding: 20px;
+	margin-top: 20px;
 
 	&__item {
 		margin-bottom: 10px;
@@ -1052,12 +1062,12 @@ TOP
 
 		&--title {
 			font-size: 20px;
-			padding: 20px;
+			margin-top: 10px;
 		}
 
 		&--discription {
 			width: 240px;
-			margin: 0px;
+			margin-top: 5px;
 		}
 	}
 

@@ -57,7 +57,7 @@ if ($tax_posts) : ?>
 				<div class="wrap box-container">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/labo-description.jpg" class="box-container__image--large">
 				</div>
-				<div class="background-color--salmon box-container">
+				<div class="background-color--salmon box-container navi">
 					<div class="wrap">
 						<ul class="inner-items">
 							<li class="inner-items__submenu">
