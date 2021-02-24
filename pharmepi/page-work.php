@@ -1,6 +1,5 @@
 <?php add_filter('wp_head', function () {
 ?>
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/html/accordion/accordion.css">
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/html/accordion/accordion.js"></script>
 <?php
 });
@@ -8,7 +7,7 @@
 <?php
 function get_accordion($category_name, $by_tags)
 {
-	echo '<div class="accordion__container">';
+	echo '<div class="accordion-container">';
 	$tags = ['list'];
 	if ($by_tags) {
 		$tags = get_tags(array('orderby' => 'name', 'order' => ''));
@@ -30,8 +29,8 @@ function get_accordion($category_name, $by_tags)
 			)
 		));
 		if ($tax_posts) {
-			$titleArgs = 'accordion__title js-accordion-title';
-			$contentsArgs = 'accordion__content margin0';
+			$titleArgs = 'accordion-container__title js-accordion-title';
+			$contentsArgs = 'accordion-container__content';
 			if ($isFirst) {
 				$titleArgs = $titleArgs . ' is-active';
 				$contentsArgs = $contentsArgs . ' is-open';
@@ -41,7 +40,7 @@ function get_accordion($category_name, $by_tags)
 			echo '<ul class="' . $contentsArgs . '">';
 			$index = 1;
 			foreach ($tax_posts as $tax_post) {
-				echo '<li class="accordion__li">' . $index . '. ' . '<a href="' . get_permalink($tax_post->ID) . '">' . get_the_title($tax_post->ID) . '</a></li>';
+				echo '<li class="list__link">' . $index . '. ' . '<a href="' . get_permalink($tax_post->ID) . '" class="a--underline">' . get_the_title($tax_post->ID) . '</a></li>';
 				$index++;
 			}
 			echo '</ul>';
@@ -70,20 +69,20 @@ function get_accordion($category_name, $by_tags)
 						the_content();
 						?>
 					</section>
-					<section class="accordion">
-						<h3>原著論文</h3>
+					<section class="accordion-wrapper">
+						<h2>原著論文</h2>
 						<?php get_accordion('paper', true); ?>
 					</section>
-					<section class="accordion">
-						<h3>学会発表</h3>
+					<section class="accordion-wrapper">
+						<h2>学会発表</h2>
 						<?php get_accordion('conference-presentation', true); ?>
 					</section>
-					<section class="accordion">
-						<h3>その他講演</h3>
+					<section class="accordion-wrapper">
+						<h2>その他講演</h2>
 						<?php get_accordion('other-presentation', false); ?>
 					</section>
-					<section class="accordion">
-						<h3>出版物</h3>
+					<section class="accordion-wrapper">
+						<h2>出版物</h2>
 						<?php get_accordion('publication', false); ?>
 					</section>
 				</div>
