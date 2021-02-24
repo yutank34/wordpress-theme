@@ -1,6 +1,6 @@
 <?php add_filter('wp_head', function () {
 ?>
-	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/html/accordion/accordion.js"></script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/accordion.js"></script>
 <?php
 });
 ?>
