@@ -1,10 +1,6 @@
-<?php add_filter('wp_head', function () {
-?>
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/html/tab/tab.css">
-	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/html/tab/tab.js"></script>
-<?php
-});
-?>
+<?php add_filter('wp_head', function () { ?>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/tab.js"></script>
+<?php }); ?>
 
 <?php get_header(); ?>
 <main id="main" class="m-all t-2of3 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
@@ -18,51 +14,49 @@
 				</header> <?php // end article header 
 							?>
 				<div class="wrap">
-					<section class="entry-contentcf" itemprop="articleBody">
+					<section class="entry-content cf" itemprop="articleBody">
 						<?php
 						// the content (pretty self explanatory huh)
 						the_content();
 						?>
 					</section>
-					<section>
-						<div class="tab-wrapper">
-							<div class="tab-panel">
-								<!--タブ-->
-								<ul class="tab-group">
-									<?php
-									$terms = get_terms('research_category', array(
-										'parent' => 0, // 親カテゴリのみ抽出
-										'orderby' => 'description'
-										// 'parent' => $term_id で子タームを抽出できる
-									));
-									if (!empty($terms) && !is_wp_error($terms)) {
-										$isFirst = true;
-										foreach ($terms as $term) {
-											$classParam = 'tab tab-width tab-' . $term->term_id;
-											if ($isFirst) {
-												$classParam = $classParam . ' is-active';
-											}
-											echo '<li class="' . $classParam . '">' . $term->name . '</li>';
-											$isFirst = false;
+					<section class="tab-section">
+						<div class="tab-container">
+							<!--タブ-->
+							<ul class="tab-container__tab-group">
+								<?php
+								$terms = get_terms('research_category', array(
+									'parent' => 0, // 親カテゴリのみ抽出
+									'orderby' => 'description'
+									// 'parent' => $term_id で子タームを抽出できる
+								));
+								if (!empty($terms) && !is_wp_error($terms)) {
+									$isFirst = true;
+									foreach ($terms as $term) {
+										$classParam = 'tab-container__tab tab-' . $term->term_id;
+										if ($isFirst) {
+											$classParam = $classParam . ' is-active';
 										}
+										echo '<li class="' . $classParam . '">' . $term->name . '</li>';
+										$isFirst = false;
 									}
-									?>
-								</ul>
-							</div>
+								}
+								?>
+							</ul>
 							<!--タブを切り替えて表示するコンテンツ-->
-							<div class="panel-group">
+							<div class="tab-container__panel-group">
 								<?php
 								$isFirst = true;
 								foreach ($terms as $term) :
 									$childTerms = get_terms('research_category', array('parent' => $term->term_id, 'hide_empty' => false, 'orderby' => 'description'));
-									$panelArgs = 'panel tab-' . $term->term_id;
+									$panelArgs = 'tab-container__panel tab-' . $term->term_id;
 									if ($isFirst) {
 										$panelArgs = $panelArgs . ' is-show';
 									}
 									$isFirst = false
 								?>
 									<div class="<?php echo $panelArgs; ?>">
-										<p><?php echo explode('|||', $term->description, 2)[1]; ?></p>
+										<p><?php echo wpautop(explode('|||', $term->description, 2)[1]); ?></p>
 										<?php
 										foreach ($childTerms as $childTerm) :
 											$tax_posts = get_posts(array(
@@ -78,15 +72,23 @@
 												)
 											));
 											if ($tax_posts) :
+												$lastWord = end(explode("-", $childTerm->slug));
+												$itemAttribute = "tab-container__panel--items";
+												$headerAttribute = "tab-container__panel--items-header";
+												if ($lastWord == "done") {
+													$headerAttribute = $headerAttribute.'-weak';
+													$itemAttribute = $itemAttribute.'-weak';
+
+												}
 										?>
-												<p><?php echo $childTerm->name; ?></p>
-												<ul class="margin0">
+												<ul class="<?php echo $itemAttribute; ?>">
+												<p class="<?php echo $headerAttribute; ?>"><?php echo $childTerm->name; ?></p>
 													<?php
 													$index = 1;
 													foreach ($tax_posts as $tax_post) :
 													?>
-														<li>
-															<?php echo $index++ . '. '; ?><a href="<?php echo get_permalink($tax_post->ID); ?>"><?php echo get_the_title($tax_post->ID); ?></a>
+														<li class="list__link">
+															<?php echo $index++ . '. '; ?><a href="<?php echo get_permalink($tax_post->ID); ?>" class="a--underline"><?php echo get_the_title($tax_post->ID); ?></a>
 														</li>
 													<?php endforeach;
 													wp_reset_postdata(); ?>
@@ -100,7 +102,7 @@
 							</div>
 						</div>
 					</section>
-					<section>
+					<section class="entry-content">
 						<p>倫理審査委員会より情報公開が求められている研究についてはこちらで公開しております。</p>
 						<button type=“button” onclick="location.href='<?php echo home_url(); ?>/%E7%A0%94%E7%A9%B6%E5%85%AC%E9%96%8B%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6'" class="main-btn">患者情報等を用いた研究について</button>
 					</section>
