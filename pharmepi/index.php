@@ -29,7 +29,7 @@ if ($tax_posts) : ?>
 	<div id="inner-content" class="cf">
 		<main id="main" class="" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 			<div class="wrap box-container">
-				<h2 class="box-container__header">薬と患者をとりまく社会に関する研究・教育活動の実施</h2>
+				<h3 class="box-container__header">薬と患者をとりまく社会に関する研究・教育活動の実施</h2>
 				<ul class="inner-items">
 					<li class="inner-items__item">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/icon_pc.png" class="inner-items__item--icon">
