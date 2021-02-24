@@ -20,7 +20,7 @@ though, go for it.
 
   a, a:visited {
     color: #444 !important;
-    text-decoration: underline;
+    text-decoration: none;
 
     // show links on printed pages
     &:after {

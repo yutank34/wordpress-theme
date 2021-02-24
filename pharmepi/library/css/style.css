@@ -117,8 +117,7 @@ a:hover {
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari 5, and Chrome.
  */
-h1 {
-  font-size: 2em;
+h1, h2, h3, h4, h5, h6 {
   margin: 0; }
 
 /**
@@ -1142,7 +1141,7 @@ textarea,
   .field[disabled],
   .field.is-disabled {
     cursor: not-allowed;
-    border-color: #cfcfcf;
+    border-color: #EDEDED;
     opacity: 0.6; }
     input[type="text"][disabled]:focus, input[type="text"][disabled]:active, input[type="text"].is-disabled:focus, input[type="text"].is-disabled:active,
     input[type="password"][disabled]:focus,
@@ -1314,8 +1313,32 @@ a, a:visited {
   /* on click */
   /* mobile tap color */ }
   a:hover, a:focus, a:visited:hover, a:visited:focus {
-    text-decoration: underline; }
+    text-decoration: none; }
   a:link, a:visited:link {
+    /*
+    this highlights links on iPhones/iPads.
+    so it basically works like the :hover selector
+    for mobile devices.
+    */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
+
+.a--underline, .a--underline:visited {
+  color: #8D3939;
+  text-decoration: none;
+  /* on hover */
+  /* on click */
+  /* mobile tap color */ }
+  .a--underline:hover, .a--underline:focus, .a--underline:visited:hover, .a--underline:visited:focus {
+    text-decoration: none; }
+    .a--underline:hover:after, .a--underline:focus:after, .a--underline:visited:hover:after, .a--underline:visited:focus:after {
+      background-color: #8D3939;
+      border-radius: 1px;
+      /* 線幅の半分 */
+      content: "";
+      display: block;
+      height: 2px;
+      /* 線幅 */ }
+  .a--underline:link, .a--underline:visited:link {
     /*
     this highlights links on iPhones/iPads.
     so it basically works like the :hover selector
@@ -1343,15 +1366,23 @@ h1, .h1 {
 
 h2, .h2 {
   font-size: 1.75em;
-  line-height: 1.4em;
-  margin-bottom: 0.375em; }
+  line-height: 1.4em; }
+  h2:after, .h2:after {
+    background-color: #EDEDED;
+    border-radius: 1px;
+    /* 線幅の半分 */
+    content: "";
+    display: block;
+    height: 2px;
+    /* 線幅 */ }
 
 h3, .h3 {
-  font-size: 1.125em; }
+  font-size: 1.5em;
+  font-weight: 300; }
 
 h4, .h4 {
   font-size: 1.1em;
-  font-weight: 700; }
+  font-weight: 500; }
 
 h5, .h5 {
   font-size: 0.846em;
@@ -1439,7 +1470,6 @@ POSTS & CONTENT STYLES
   font-size: 1.0em;
   background-color: #BEA6A0;
   color: #251715;
-  padding-left: 10px;
   height: 40px;
   margin: 0; }
   .article-header h1 {
@@ -1650,7 +1680,7 @@ COMMENT STYLES
         color: #9fa6b4;
         text-decoration: none; }
         .comment .vcard time a:hover {
-          text-decoration: underline; }
+          text-decoration: none; }
     .comment .vcard .avatar {
       position: absolute;
       left: 16px;
@@ -1794,7 +1824,7 @@ TOP
   .slider__figure--text-wrapper {
     position: absolute;
     /*絶対配置*/
-    color: white;
+    color: #fff;
     /*文字は白に*/
     background-color: rgba(37, 23, 21, 0.5);
     top: 50%;
@@ -1848,7 +1878,7 @@ TOP
     .inner-items__submenu--text {
       position: absolute;
       /*絶対配置*/
-      color: white;
+      color: #fff;
       /*文字は白に*/
       background-color: rgba(37, 23, 21, 0.5);
       top: 100%;
@@ -1862,6 +1892,112 @@ TOP
 
 .background-color--salmon {
   background-color: #BEA6A0; }
+
+/*********************
+TOP
+*********************/
+.tab-section {
+  background-color: #FFF7F5; }
+
+.tab-container {
+  padding: 40px 8%; }
+  .tab-container__tab-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding: .625em auto; }
+  .tab-container__tab {
+    flex-grow: 1;
+    padding: 15px;
+    list-style: none;
+    border: solid 1px #FFF7F5;
+    background-color: #BEA6A0;
+    text-align: center;
+    cursor: pointer;
+    width: 25%; }
+    .tab-container__tab.is-active {
+      background: #8D3939;
+      color: #FFF7F5;
+      transition: all 0.2s ease-out;
+      margin: 0px; }
+  .tab-container__panel-group {
+    border: solid 1px #FFF7F5;
+    border-top: none;
+    background: #fff; }
+  .tab-container__panel {
+    padding: 20px;
+    display: none; }
+    .tab-container__panel.is-show {
+      display: block; }
+    .tab-container__panel--items {
+      margin-top: 10px; }
+      .tab-container__panel--items-weak {
+        margin-top: 5px;
+        background-color: #EDEDED;
+        border-radius: 10px 20px;
+        padding: 20px;
+        font-size: 14px; }
+      .tab-container__panel--items-header {
+        margin-top: 20px;
+        font-size: 20px; }
+
+/*********************
+ACCORDION
+*********************/
+.accordion-wrapper {
+  margin-top: 10px; }
+
+.accordion-container {
+  margin-top: 10px;
+  padding: 40px 8%;
+  background-color: #FFF7F5; }
+  .accordion-container__title {
+    background-color: #BEA6A0;
+    border: 1px solid #FFF7F5;
+    padding: 15px 15px 15px 2em;
+    position: relative;
+    cursor: pointer;
+    user-select: none; }
+    .accordion-container__title::before, .accordion-container__title::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      width: 15px;
+      height: 2px;
+      right: 25px; }
+    .accordion-container__title::after {
+      transform: rotate(90deg);
+      transition-duration: .3s; }
+    .accordion-container__title:hover, .accordion-container__title:active, .accordion-container__title.is-active {
+      background-color: #8D3939;
+      color: #fff; }
+    .accordion-container__title.is-active::before {
+      opacity: 0; }
+    .accordion-container__title.is-active::after {
+      transform: rotate(0); }
+  .accordion-container__content {
+    border-left: 1px solid #FFF7F5;
+    border-right: 1px solid #FFF7F5;
+    background-color: #fff;
+    padding: 0 1.5em;
+    line-height: 0;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition-duration: .3s; }
+    .accordion-container__content.is-open {
+      padding: .625em 1.5em;
+      line-height: normal;
+      /* numberに書き換える*/
+      height: auto;
+      opacity: 1; }
+
+.list__link {
+  display: inline-block;
+  margin-top: 5px; }
 
 /*********************
 LARGER MOBILE DEVICES
@@ -2008,7 +2144,7 @@ you can add resource intensive styles.
         */ }
         .nav li a:hover, .nav li a:focus {
           color: #8D3939;
-          text-decoration: underline; }
+          text-decoration: none; }
       .nav li ul.sub-menu,
       .nav li ul.children {
         margin-top: 0;
@@ -2203,7 +2339,7 @@ be set to display none.
 
   a, a:visited {
     color: #444 !important;
-    text-decoration: underline; }
+    text-decoration: none; }
     a:after, a:visited:after {
       content: " (" attr(href) ")"; }
     a abbr[title]:after, a:visited abbr[title]:after {

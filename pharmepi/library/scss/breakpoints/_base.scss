@@ -85,7 +85,41 @@ a, a:visited {
 	/* on hover */
 	&:hover, &:focus {
 		// color: $link-hover;
-		text-decoration: underline;
+		text-decoration: none;
+
+	}
+
+	/* on click */
+	&:active {
+
+	}
+
+	/* mobile tap color */
+	&:link {
+		/*
+		this highlights links on iPhones/iPads.
+		so it basically works like the :hover selector
+		for mobile devices.
+		*/
+		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+	}
+}
+
+.a--underline, .a--underline:visited {
+	color: $link-color;
+	text-decoration: none;
+	/* on hover */
+	&:hover, &:focus {
+		// color: $link-hover;
+		text-decoration: none;
+
+		&:after {
+			background-color: $key-color;
+			border-radius: 1px; /* 線幅の半分 */
+			content: "";
+			display: block;
+			height: 2px; /* 線幅 */
+		}
 
 	}
 
@@ -131,16 +165,24 @@ h1, .h1 {
 h2, .h2 {
 	font-size: 1.75em;
 	line-height: 1.4em;
-	margin-bottom: 0.375em;
+
+	&:after {
+		background-color: $disabled-gray;
+		border-radius: 1px; /* 線幅の半分 */
+		content: "";
+		display: block;
+		height: 2px; /* 線幅 */
+	}
 }
 
 h3, .h3 {
-	font-size: 1.125em;
+	font-size: 1.5em;
+	font-weight: 300;
 }
 
 h4, .h4 {
 	font-size: 1.1em;
-	font-weight: 700;
+	font-weight: 500;
 }
 
 h5, .h5 {
@@ -307,7 +349,6 @@ POSTS & CONTENT STYLES
 			font-size: 1.0em;
 			background-color: $salmon;
 			color: $blown;
-			padding-left: 10px;
 			height: 40px;
 			margin: 0;
 
@@ -670,7 +711,7 @@ COMMENT STYLES
 				text-decoration: none;
 
 				&:hover {
-					text-decoration: underline;
+					text-decoration: none;
 				}
 
 			}
@@ -959,7 +1000,7 @@ TOP
 
 	&__figure--text-wrapper {
 		position: absolute;/*絶対配置*/
-		color: white;/*文字は白に*/
+		color: $white;/*文字は白に*/
 		background-color: rgba(37, 23, 21, 0.5);
 		top: 50%;
 		right: 0%;
@@ -1033,7 +1074,7 @@ TOP
 
 		&--text {
 			position: absolute;/*絶対配置*/
-    		color: white;/*文字は白に*/
+    		color: $white;/*文字は白に*/
     		background-color: rgba(37, 23, 21, 0.5);
     		top: 100%;
 			right: 0%;
@@ -1057,3 +1098,151 @@ TOP
 /*********************
 TOP
 *********************/
+.tab-section {
+	background-color: $light-salmon;
+}
+.tab-container {
+	padding: 40px 8%;
+
+	&__tab-group {
+		display: flex;
+  		flex-wrap: wrap;
+  		justify-content: center;
+		// height: 60px;
+		font-size: 1.1em;
+		font-weight: 500;
+		padding: .625em auto;
+		// line-height: 40px;
+	}
+
+	&__tab {
+		flex-grow: 1;
+		padding:15px;
+		list-style:none;
+		border:solid 1px $light-salmon;
+		background-color: $salmon;
+		text-align:center;
+		cursor:pointer;
+		width: 25%;
+
+		&.is-active{
+			background: $key-color;
+			color:$light-salmon;
+			transition: all 0.2s ease-out;
+			margin: 0px;
+		}
+	}
+
+	&__panel-group {
+		border:solid 1px $light-salmon;
+		border-top:none;
+		background: $white;
+	}
+
+	&__panel {
+		padding: 20px;
+		display:none;
+
+		&.is-show {
+			display:block;
+		}
+
+		&--items {
+			margin-top: 10px;
+
+			&-weak {
+				margin-top: 5px;
+				background-color: $disabled-gray;
+				border-radius: 10px 20px;
+				padding: 20px;
+				font-size: 14px;
+			}
+
+			&-header {
+				margin-top: 20px;
+				font-size: 20px;
+	
+				&-weak {
+				}
+			}
+		}
+	}
+}
+
+/*********************
+ACCORDION
+*********************/
+
+.accordion-wrapper {
+	margin-top: 10px;
+}
+
+.accordion-container {
+	margin-top: 10px;
+	padding: 40px 8%;
+	background-color: $light-salmon;
+
+	&__title {
+		background-color: $salmon;
+		border: 1px solid $light-salmon;
+		padding: 15px 15px 15px 2em;
+		position: relative;
+		cursor: pointer;
+		user-select: none;
+
+		&::before, &::after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 50%;
+			width: 15px;
+			height: 2px;
+			right: 25px;
+		}
+
+		&::after {
+			transform: rotate(90deg);
+			transition-duration: .3s;
+		}
+
+		&:hover,
+		&:active,
+		&.is-active { 
+			background-color: $key-color;
+			color: $white;
+		}
+
+		&.is-active::before {
+			opacity: 0;
+		}
+
+		&.is-active::after {
+			transform: rotate(0);
+		}
+	}
+
+	&__content {
+		border-left: 1px solid $light-salmon;
+		border-right: 1px solid $light-salmon;
+		background-color: $white;
+		padding: 0 1.5em;
+		line-height: 0;
+		height: 0;
+		overflow: hidden;
+		opacity: 0;
+		transition-duration: .3s;
+
+		&.is-open {
+			// border-top: 1px solid $light-salmon;
+			padding: .625em 1.5em;
+			line-height: normal; /* numberに書き換える*/
+			height: auto;
+			opacity: 1;
+		}
+	}
+}
+
+.list__link {
+	display: inline-block;
+	margin-top: 5px;
+}

@@ -48,7 +48,7 @@ body#tinymce.wp-editor {
 		/* on hover */
 		&:hover, &:focus {
 			color: $link-color;
-			text-decoration: underline;
+			text-decoration: none;
 		}
 
 		/* on click */
