@@ -111,7 +111,7 @@ a, a:visited {
 	/* on hover */
 	&:hover, &:focus {
 		// color: $link-hover;
-		text-decoration: none;
+		// text-decoration: none;
 
 		&:after {
 			background-color: $key-color;
@@ -119,6 +119,7 @@ a, a:visited {
 			content: "";
 			display: block;
 			height: 2px; /* 線幅 */
+			transition: all 0.2s ease-out;
 		}
 
 	}
@@ -198,10 +199,10 @@ HEADER STYLES
 
 .header {
 	background-color: $white;
-	display: flex;
+	display: none;
 	justify-content: space-between;
 	align-items: center;
-	height: 90px;
+	height: 70px;
 
 	&__home-link {
 		height: 80%;
@@ -213,7 +214,10 @@ HEADER STYLES
 	&__image {
 		width: auto;
 		height: 100%;
-		margin-right: 14px;
+	}
+
+	&__home-name {
+		margin-left: 10px;
 	}
 }
 
@@ -225,8 +229,10 @@ HEADER STYLES
 		}
 	}
 
-
-	
+.homepage-name {
+	font-size: 20px;
+	font-weight: bold;
+}	
 
 /*********************
 NAVIGATION STYLES
@@ -240,6 +246,12 @@ the navs on the site so our css is cleaner
 and more scalable.
 */
 
+.nav-wrapper {
+	height: 100%;
+	display: flex;
+	align-items: flex-end;
+}
+
 .nav {
 	border-bottom: 0;
 	margin: 0;
@@ -250,7 +262,20 @@ and more scalable.
 			display: block;
 			color: $blown;
 			text-decoration: none;
-			padding: 0.75em;
+			margin-left: 0.75em;
+
+			&:after {
+				background-color: $white;
+				border-radius: 1px; /* 線幅の半分 */
+				content: "";
+				display: block;
+				height: 4px; /* 線幅 */
+				margin-top: 17px;
+			}
+
+			&:first {
+				padding-left: 0em;
+			}
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -259,7 +284,15 @@ and more scalable.
 			keep this file as small as possible!
 			*/
 			&:hover, &:focus {
-				color: $key-color;
+				&:after {
+					background-color: $key-color;
+					border-radius: 2px; /* 線幅の半分 */
+					content: "";
+					display: block;
+					height: 4px; /* 線幅 */
+					margin-top: 17px;
+					transition: all 0.2s ease-out;
+				}
 			}
 		}
 
@@ -308,7 +341,17 @@ and more scalable.
 	li.current_page_item,
 	li.current_page_ancestor {
 
-		a {}
+		a {
+
+			&:after {
+				background-color: $key-color;
+				border-radius: 2px; /* 線幅の半分 */
+				content: "";
+				display: block;
+				height: 4px; /* 線幅 */
+				margin-top: 17px;
+			}
+		}
 
 	}  /* end current highlighters */
 
@@ -1006,8 +1049,8 @@ TOP
 		right: 0%;
 		-ms-transform: translate(-50%,-50%);
 		-webkit-transform: translate(-50%,-50%);
-		transform: translate(-50%,-50%);
-		margin:0;
+		transform: translate(0%,-50%);
+		margin:0 auto;
 		padding:0;
 		max-width: 800px;
 	}
@@ -1020,10 +1063,9 @@ TOP
 
 .box-container {
 	text-align: center;
-	margin-top: 40px;
+	margin-top: 60px;
 
 	&__header {
-		margin-top: 40px;
 	}
 
 	&__text--discription {
@@ -1050,11 +1092,10 @@ TOP
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
-	padding: 20px;
-	margin-top: 20px;
+	margin-top: 40px;
 
 	&__item {
-		margin-bottom: 10px;
+		margin-top: 15px;
 
 		&--icon {
 			width: auto;
@@ -1063,7 +1104,7 @@ TOP
 
 		&--title {
 			font-size: 20px;
-			margin-top: 10px;
+			margin-top: 5px;
 		}
 
 		&--discription {
@@ -1136,7 +1177,7 @@ TOP
 		cursor:pointer;
 		width: 25%;
 
-		&.is-active{
+		&.is-active, &:hover {
 			background: $key-color;
 			color:$light-salmon;
 			transition: all 0.2s ease-out;
@@ -1221,6 +1262,7 @@ ACCORDION
 		&.is-active { 
 			background-color: $key-color;
 			color: $white;
+			transition: all 0.2s ease-out;
 		}
 
 		&.is-active::before {
