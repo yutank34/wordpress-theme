@@ -23,18 +23,20 @@ body {}
 LAYOUT & GRID STYLES
 *********************/
 
-.wrap {
-	width: 760px;
-	margin: 0 auto;
-}
 
 /*********************
 HEADER STYLES
 *********************/
 
-.header {}
+.header {
+	display: flex;
+}
 
 	#logo {}
+
+.weak {
+	font-size: 16px;
+}
 
 /*********************
 NAVIGATION STYLES
