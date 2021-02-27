@@ -53,7 +53,7 @@ function get_accordion($category_name, $by_tags)
 
 <!-- ここから画面描画 -->
 <?php get_header(); ?>
-<main id="main" class="m-all t-2of3 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+<main id="main" class="m-all cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
