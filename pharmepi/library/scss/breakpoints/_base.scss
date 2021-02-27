@@ -111,7 +111,7 @@ a, a:visited {
 	/* on hover */
 	&:hover, &:focus {
 		// color: $link-hover;
-		// text-decoration: none;
+		text-decoration: none;
 
 		&:after {
 			background-color: $key-color;
@@ -1279,7 +1279,6 @@ ACCORDION
 		border-right: 1px solid $light-salmon;
 		background-color: $white;
 		padding: 0 1.5em;
-		line-height: 0;
 		height: 0;
 		overflow: hidden;
 		opacity: 0;
@@ -1288,7 +1287,6 @@ ACCORDION
 		&.is-open {
 			// border-top: 1px solid $light-salmon;
 			padding: .625em 1.5em;
-			line-height: normal; /* numberに書き換える*/
 			height: auto;
 			opacity: 1;
 		}

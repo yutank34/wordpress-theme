@@ -88,7 +88,7 @@
 													foreach ($tax_posts as $tax_post) :
 													?>
 														<li class="list__link">
-															<?php echo $index++ . '. '; ?><a href="<?php echo get_permalink($tax_post->ID); ?>" class="a--underline"><?php echo get_the_title($tax_post->ID); ?></a>
+															<?php echo $index++ . '.&nbsp;'; ?><a href="<?php echo get_permalink($tax_post->ID); ?>" class="a--underline"><?php echo get_the_title($tax_post->ID); ?></a>
 														</li>
 													<?php endforeach;
 													wp_reset_postdata(); ?>

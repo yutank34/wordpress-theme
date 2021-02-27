@@ -1329,15 +1329,17 @@ a, a:visited {
   /* on hover */
   /* on click */
   /* mobile tap color */ }
-  .a--underline:hover:after, .a--underline:focus:after, .a--underline:visited:hover:after, .a--underline:visited:focus:after {
-    background-color: #8D3939;
-    border-radius: 1px;
-    /* 線幅の半分 */
-    content: "";
-    display: block;
-    height: 2px;
-    /* 線幅 */
-    transition: all 0.2s ease-out; }
+  .a--underline:hover, .a--underline:focus, .a--underline:visited:hover, .a--underline:visited:focus {
+    text-decoration: none; }
+    .a--underline:hover:after, .a--underline:focus:after, .a--underline:visited:hover:after, .a--underline:visited:focus:after {
+      background-color: #8D3939;
+      border-radius: 1px;
+      /* 線幅の半分 */
+      content: "";
+      display: block;
+      height: 2px;
+      /* 線幅 */
+      transition: all 0.2s ease-out; }
   .a--underline:link, .a--underline:visited:link {
     /*
     this highlights links on iPhones/iPads.
@@ -2029,15 +2031,12 @@ ACCORDION
     border-right: 1px solid #FFF7F5;
     background-color: #fff;
     padding: 0 1.5em;
-    line-height: 0;
     height: 0;
     overflow: hidden;
     opacity: 0;
     transition-duration: .3s; }
     .accordion-container__content.is-open {
       padding: .625em 1.5em;
-      line-height: normal;
-      /* numberに書き換える*/
       height: auto;
       opacity: 1; }
 

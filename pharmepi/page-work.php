@@ -40,7 +40,7 @@ function get_accordion($category_name, $by_tags)
 			echo '<ul class="' . $contentsArgs . '">';
 			$index = 1;
 			foreach ($tax_posts as $tax_post) {
-				echo '<li class="list__link">' . $index . '. ' . '<a href="' . get_permalink($tax_post->ID) . '" class="a--underline">' . get_the_title($tax_post->ID) . '</a></li>';
+				echo '<li class="list__link">' . $index . '.&nbsp;' . '<a href="' . get_permalink($tax_post->ID) . '" class="a--underline">' . get_the_title($tax_post->ID) . '</a></li>';
 				$index++;
 			}
 			echo '</ul>';
