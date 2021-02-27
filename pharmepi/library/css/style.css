@@ -936,7 +936,8 @@ and it will create a button dependant on those variables.
     background-color: #7b3232; }
 
 .header-btn {
-  height: 100%; }
+  height: 100%;
+  margin-left: 20px; }
 
 /******************************************************************
 Site Name:
@@ -1328,16 +1329,15 @@ a, a:visited {
   /* on hover */
   /* on click */
   /* mobile tap color */ }
-  .a--underline:hover, .a--underline:focus, .a--underline:visited:hover, .a--underline:visited:focus {
-    text-decoration: none; }
-    .a--underline:hover:after, .a--underline:focus:after, .a--underline:visited:hover:after, .a--underline:visited:focus:after {
-      background-color: #8D3939;
-      border-radius: 1px;
-      /* 線幅の半分 */
-      content: "";
-      display: block;
-      height: 2px;
-      /* 線幅 */ }
+  .a--underline:hover:after, .a--underline:focus:after, .a--underline:visited:hover:after, .a--underline:visited:focus:after {
+    background-color: #8D3939;
+    border-radius: 1px;
+    /* 線幅の半分 */
+    content: "";
+    display: block;
+    height: 2px;
+    /* 線幅 */
+    transition: all 0.2s ease-out; }
   .a--underline:link, .a--underline:visited:link {
     /*
     this highlights links on iPhones/iPads.
@@ -1395,10 +1395,10 @@ HEADER STYLES
 *********************/
 .header {
   background-color: #fff;
-  display: flex;
+  display: none;
   justify-content: space-between;
   align-items: center;
-  height: 90px; }
+  height: 70px; }
   .header__home-link {
     height: 80%;
     text-decoration: none !important;
@@ -1406,8 +1406,13 @@ HEADER STYLES
     display: flex; }
   .header__image {
     width: auto;
-    height: 100%;
-    margin-right: 14px; }
+    height: 100%; }
+  .header__home-name {
+    margin-left: 10px; }
+
+.homepage-name {
+  font-size: 20px;
+  font-weight: bold; }
 
 /*********************
 NAVIGATION STYLES
@@ -1419,6 +1424,11 @@ easily write one group of styles for
 the navs on the site so our css is cleaner
 and more scalable.
 */
+.nav-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: flex-end; }
+
 .nav {
   border-bottom: 0;
   margin: 0;
@@ -1437,15 +1447,34 @@ and more scalable.
       display: block;
       color: #251715;
       text-decoration: none;
-      padding: 0.75em;
+      margin-left: 0.75em;
       /*
       remember this is for mobile ONLY, so there's no need
       to even declare hover styles here, you can do it in
       the style.scss file where it's relevant. We want to
       keep this file as small as possible!
       */ }
-      .nav li a:hover, .nav li a:focus {
-        color: #8D3939; }
+      .nav li a:after {
+        background-color: #fff;
+        border-radius: 1px;
+        /* 線幅の半分 */
+        content: "";
+        display: block;
+        height: 4px;
+        /* 線幅 */
+        margin-top: 17px; }
+      .nav li a:first {
+        padding-left: 0em; }
+      .nav li a:hover:after, .nav li a:focus:after {
+        background-color: #8D3939;
+        border-radius: 2px;
+        /* 線幅の半分 */
+        content: "";
+        display: block;
+        height: 4px;
+        /* 線幅 */
+        margin-top: 17px;
+        transition: all 0.2s ease-out; }
     .nav li ul.sub-menu li a,
     .nav li ul.children li a {
       padding-left: 30px; }
@@ -1453,6 +1482,17 @@ and more scalable.
       .nav li ul.children li a:hover,
       .nav li ul.children li a:focus {
         color: #8D3939; }
+  .nav li.current-menu-item a:after,
+  .nav li.current_page_item a:after,
+  .nav li.current_page_ancestor a:after {
+    background-color: #8D3939;
+    border-radius: 2px;
+    /* 線幅の半分 */
+    content: "";
+    display: block;
+    height: 4px;
+    /* 線幅 */
+    margin-top: 17px; }
 
 /* end .nav */
 /*********************
@@ -1831,8 +1871,8 @@ TOP
     right: 0%;
     -ms-transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    margin: 0;
+    transform: translate(0%, -50%);
+    margin: 0 auto;
     padding: 0;
     max-width: 800px; }
   .slider__figure--text {
@@ -1841,9 +1881,7 @@ TOP
 
 .box-container {
   text-align: center;
-  margin-top: 40px; }
-  .box-container__header {
-    margin-top: 40px; }
+  margin-top: 60px; }
   .box-container__text--discription {
     padding: 54px 110px; }
   .box-container__image--large {
@@ -1861,16 +1899,15 @@ TOP
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  padding: 20px;
-  margin-top: 20px; }
+  margin-top: 40px; }
   .inner-items__item {
-    margin-bottom: 10px; }
+    margin-top: 15px; }
     .inner-items__item--icon {
       width: auto;
       height: 70px; }
     .inner-items__item--title {
       font-size: 20px;
-      margin-top: 10px; }
+      margin-top: 5px; }
     .inner-items__item--discription {
       width: 240px;
       margin-top: 5px; }
@@ -1925,7 +1962,7 @@ TOP
     text-align: center;
     cursor: pointer;
     width: 25%; }
-    .tab-container__tab.is-active {
+    .tab-container__tab.is-active, .tab-container__tab:hover {
       background: #8D3939;
       color: #FFF7F5;
       transition: all 0.2s ease-out;
@@ -1981,7 +2018,8 @@ ACCORDION
       transition-duration: .3s; }
     .accordion-container__title:hover, .accordion-container__title:active, .accordion-container__title.is-active {
       background-color: #8D3939;
-      color: #fff; }
+      color: #fff;
+      transition: all 0.2s ease-out; }
     .accordion-container__title.is-active::before {
       opacity: 0; }
     .accordion-container__title.is-active::after {
@@ -2040,7 +2078,7 @@ tweeners.
   LAYOUT & GRID STYLES
   *********************/
   .wrap {
-    width: 460px;
+    width: 100%;
     margin: 0 auto; }
 
   /*********************
@@ -2119,13 +2157,15 @@ you can add resource intensive styles.
   /*********************
   LAYOUT & GRID STYLES
   *********************/
-  .wrap {
-    width: 760px;
-    margin: 0 auto; }
-
   /*********************
   HEADER STYLES
   *********************/
+  .header {
+    display: flex; }
+
+  .weak {
+    font-size: 16px; }
+
   /*********************
   NAVIGATION STYLES
   *********************/
@@ -2251,10 +2291,7 @@ you can add resource intensive styles.
   This is the desktop size. It's larger than an iPad so it will only
   be seen on the Desktop.
   
-  ******************************************************************/
-  .wrap {
-    width: 1020px;
-    margin: 0 auto; } }
+  ******************************************************************/ }
 /*********************
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.
@@ -2271,7 +2308,7 @@ This is for the larger monitors and possibly full screen viewers.
   
   ******************************************************************/
   .wrap {
-    width: 1280px;
+    width: 1240px;
     margin: 0 auto; } }
 /*********************
 RETINA (2x RESOLUTION DEVICES)

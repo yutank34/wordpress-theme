@@ -77,4 +77,5 @@ and it will create a button dependant on those variables.
 .header-btn {
   @extend .main-btn;
   height: 100%;
+  margin-left: 20px;
 }

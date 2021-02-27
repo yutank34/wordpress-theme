@@ -57,7 +57,7 @@
 
 					<?php // if you'd like to use the site description you can un-comment it below ?>
 					<?php // bloginfo('description'); ?>
-					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement" class="nav-wrapper">
 						<?php wp_nav_menu(array(
     					        //  'container' => false,                           // remove nav container
 								'container_class' => 'menu cf',                 // class of container (should you choose to use it)
@@ -71,9 +71,9 @@
         			        	'depth' => 1,                                   // limit the depth of the nav
     					        'fallback_cb' => ''                             // fallback function (if there is one)
 						)); ?>
-
+						<button type="button" onclick="location.href='https://www.my-pharm.ac.jp'" class="header-btn">明治薬科大学HP</button>
 					</nav>
-					<button type="button" onclick="location.href='https://www.my-pharm.ac.jp'" class="header-btn">明治薬科大学HP</button>
+					
 				</div>
 
 			</header>
