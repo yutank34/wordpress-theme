@@ -1512,7 +1512,6 @@ POSTS & CONTENT STYLES
   font-size: 1.0em;
   background-color: #BEA6A0;
   color: #251715;
-  height: 40px;
   margin: 0; }
   .article-header h1 {
     line-height: 1.7em; }
@@ -1540,6 +1539,7 @@ POSTS & CONTENT STYLES
 
 /* entry content */
 .entry-content {
+  margin-top: 20px;
   padding: 1.5em 1.5em 0;
   /*
   image alignment on a screen this size may be
@@ -2106,6 +2106,7 @@ tweeners.
   *********************/
   /* entry content */
   .entry-content {
+    margin-top: 20px;
     /* at this larger size, we can start to align images */ }
     .entry-content .alignleft, .entry-content img.alignleft {
       margin-right: 1.5em;

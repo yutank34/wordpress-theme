@@ -258,7 +258,7 @@ function create_post_type_named_research() {
     array(
       'label' => '研究内容',  // カスタム投稿名(管理画面の左メニューに表示されるテキスト)
       'public' => true,  // 投稿タイプをパブリックにするか否か
-      'has_archive' => true,  // アーカイブ(一覧表示)を有効にするか否か
+      'has_archive' => false,  // アーカイブ(一覧表示)を有効にするか否か
       'menu_position' => 5,  // 管理画面上でどこに配置するか今回の場合は「投稿」の下に配置
       'supports' => $supports,  // 投稿画面でどのmoduleを使うか的な設定
       'taxonomies' => $tags
@@ -292,13 +292,18 @@ function create_post_type_named_news() {
     array(
       'label' => 'お知らせ',
       'public' => true,
-      'has_archive' => true,
+      'has_archive' => false,
       'menu_position' => 7,
       'supports' => $supports
     )
   );
 }
 add_action( 'init', 'create_post_type_named_news' );
+
+function set_fs_method($args) {
+  return 'direct';
+}
+add_filter('filesystem_method','set_fs_method');
 
 // 記事が404の時にコメントアウトして実行　https://gray-code.com/blog/wordpress/how-to-repair-404page/
 // global $wp_rewrite;

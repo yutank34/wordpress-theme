@@ -70,13 +70,13 @@ if ($tax_posts) : ?>
 							</a>
 						</li>
 						<li class="inner-items__submenu">
-							<a href="<?php echo home_url(); ?>/research">
+							<a href="<?php echo home_url(); ?>/researchs">
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/stock-photo-book-in-library-with-open-textbook-education-learning-concept-1274296330.jpg" alt="" class="inner-items__submenu--image">
 								<p class="inner-items__submenu--text">研究内容の紹介</p>
 							</a>
 						</li>
 						<li class="inner-items__submenu">
-							<a href="<?php echo home_url(); ?>/work">
+							<a href="<?php echo home_url(); ?>/works">
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/stock-photo-speaker-giving-a-talk-in-conference-hall-at-business-event-audience-at-the-conference-hall-1117902230.jpg" alt="" class="inner-items__submenu--image">
 								<p class="inner-items__submenu--text">研究業績の紹介</p>
 							</a>
