@@ -70,7 +70,7 @@ if ($tax_posts) : ?>
 							</a>
 						</li>
 						<li class="inner-items__submenu">
-							<a href="<?php echo home_url(); ?>/reserch">
+							<a href="<?php echo home_url(); ?>/research">
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/stock-photo-book-in-library-with-open-textbook-education-learning-concept-1274296330.jpg" alt="" class="inner-items__submenu--image">
 								<p class="inner-items__submenu--text">研究内容の紹介</p>
 							</a>
