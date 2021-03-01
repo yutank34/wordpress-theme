@@ -1059,6 +1059,36 @@ TOP
 	}
 }
 
+.top-news {
+	border: solid 4px $salmon;
+	background-color: $light-salmon;
+	border-radius: 30px;
+	padding: 20px;
+
+	&--header {
+		display: flex;
+		align-items: center;
+		&__icon {
+			height: 30px;
+	
+		}
+		&__title {
+			margin-left: 4px;
+		}
+	}
+
+	&--list {
+		&__ul {
+			list-style: circle;
+			margin-left: 11px;
+		}
+
+		&__li {
+			list-style: circle;
+		}
+	}
+}
+
 .box-container {
 	text-align: center;
 	margin-top: 60px;

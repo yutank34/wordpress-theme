@@ -1879,6 +1879,24 @@ TOP
     font-size: 48px;
     padding: 10px 40px; }
 
+.top-news {
+  border: solid 4px #BEA6A0;
+  background-color: #FFF7F5;
+  border-radius: 30px;
+  padding: 20px; }
+  .top-news--header {
+    display: flex;
+    align-items: center; }
+    .top-news--header__icon {
+      height: 30px; }
+    .top-news--header__title {
+      margin-left: 4px; }
+  .top-news--list__ul {
+    list-style: circle;
+    margin-left: 11px; }
+  .top-news--list__li {
+    list-style: circle; }
+
 .box-container {
   text-align: center;
   margin-top: 60px; }

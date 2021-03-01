@@ -6,14 +6,20 @@ $tax_posts = get_posts(array(
 ));
 if ($tax_posts) : ?>
 	<div class="wrap">
-		<ul class="margin0">
-			<?php foreach ($tax_posts as $tax_post) : ?>
-				<li>
-					<a href="<?php echo get_permalink($tax_post->ID); ?>"><?php echo get_the_title($tax_post->ID); ?></a>
-				</li>
-			<?php endforeach;
-			wp_reset_postdata(); ?>
-		</ul>
+		<div class="top-news">
+			<div class="top-news--header">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/news_icon.png" class="top-news--header__icon">
+				<h4 class="top-news--header__title">お知らせ</h4>
+			</div>
+			<ul class="top-news--list__ul">
+				<?php foreach ($tax_posts as $tax_post) : ?>
+					<li class='list__link top-news--list__li'>
+						○&nbsp;<a href="<?php echo get_permalink($tax_post->ID); ?>" class="a--underline"><?php echo get_the_title($tax_post->ID); ?></a>
+					</li>
+				<?php endforeach;
+				wp_reset_postdata(); ?>
+			</ul>
+		</div>
 	</div>
 <?php endif; ?>
 <div id="content">
@@ -30,24 +36,24 @@ if ($tax_posts) : ?>
 		<main id="main" class="" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 			<div class="box-container">
 				<div class="wrap">
-				<h3 class="box-container__header">薬と患者をとりまく社会に関する研究・教育活動の実施</h2>
-					<ul class="inner-items">
-						<li class="inner-items__item">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/icon_pc.png" class="inner-items__item--icon">
-							<p class="inner-items__item--title">薬剤疫学研究</p>
-							<p class="inner-items__item--discription">医薬品の適正使用や副作用リスクを評価する研究</p>
-						</li>
-						<li class="inner-items__item">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/icon_economy.png" class="inner-items__item--icon">
-							<p class="inner-items__item--title">薬剤経済学研究</p>
-							<p class="inner-items__item--discription">医療の費用対効果や患者QOLを取り扱う研究</p>
-						</li>
-						<li class="inner-items__item">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/icon_health.png" class="inner-items__item--icon">
-							<p class="inner-items__item--title">ヘルスサービス研究</p>
-							<p class="inner-items__item--discription">医療機関や地域で活躍する薬剤師の役割を考える研究</p>
-						</li>
-					</ul>
+					<h3 class="box-container__header">薬と患者をとりまく社会に関する研究・教育活動の実施</h2>
+						<ul class="inner-items">
+							<li class="inner-items__item">
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/icon_pc.png" class="inner-items__item--icon">
+								<p class="inner-items__item--title">薬剤疫学研究</p>
+								<p class="inner-items__item--discription">医薬品の適正使用や副作用リスクを評価する研究</p>
+							</li>
+							<li class="inner-items__item">
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/icon_economy.png" class="inner-items__item--icon">
+								<p class="inner-items__item--title">薬剤経済学研究</p>
+								<p class="inner-items__item--discription">医療の費用対効果や患者QOLを取り扱う研究</p>
+							</li>
+							<li class="inner-items__item">
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/icon_health.png" class="inner-items__item--icon">
+								<p class="inner-items__item--title">ヘルスサービス研究</p>
+								<p class="inner-items__item--discription">医療機関や地域で活躍する薬剤師の役割を考える研究</p>
+							</li>
+						</ul>
 				</div>
 			</div>
 			<div class="background-color--salmon box-container">
