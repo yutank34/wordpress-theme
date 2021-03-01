@@ -1885,7 +1885,7 @@ TOP
   .box-container__text--discription {
     padding: 54px 20px; }
   .box-container__image--large {
-    width: 70%;
+    width: 100%;
     height: auto;
     margin-top: 54px; }
   .box-container__text--header {
@@ -2042,6 +2042,13 @@ ACCORDION
 .list__link {
   display: flex;
   margin-top: 5px; }
+
+.text__bold {
+  font-weight: bold; }
+.text__underline {
+  text-decoration: underline; }
+.text__oblique {
+  font-style: oblique; }
 
 /*********************
 LARGER MOBILE DEVICES
@@ -2275,7 +2282,12 @@ you can add resource intensive styles.
 
   /* end .footer-links */
   .box-container__text--discription {
-    padding: 54px 110px; } }
+    padding: 54px 110px; }
+
+  .box-container {
+    margin-top: 60px; }
+    .box-container__image--large {
+      width: 100%; } }
 /*********************
 DESKTOP
 This is the average viewing window. So Desktops, Laptops, and

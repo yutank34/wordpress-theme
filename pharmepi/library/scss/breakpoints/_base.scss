@@ -1071,7 +1071,7 @@ TOP
 	}
 
 	&__image--large {
-		width: 70%;
+		width: 100%;
     	height: auto;
 		margin-top: 54px;
 	}
@@ -1295,4 +1295,16 @@ ACCORDION
 .list__link {
 	display: flex;
 	margin-top: 5px;
+}
+
+.text {
+	&__bold {
+		font-weight: bold;
+	}
+	&__underline {
+		text-decoration : underline;
+	}
+	&__oblique {
+		font-style: oblique;
+	}
 }

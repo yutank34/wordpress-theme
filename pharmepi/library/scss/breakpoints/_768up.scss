@@ -294,3 +294,11 @@ mobile. Make sure to double check these!
 		padding: 54px 110px;
 	}
 }
+
+
+.box-container {
+	margin-top: 60px;
+	&__image--large {
+		width: 100%;
+	}
+}
