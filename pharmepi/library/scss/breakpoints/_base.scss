@@ -992,10 +992,8 @@ FOOTER STYLES
 	clear: both;
 	background-color: $wine-red;
 	color: $white;
-	height: 65px;
 	text-align: center;
-    padding: 4px;
-	line-height: 60px;
+    padding: 20px;
 }
 
 	/*
@@ -1069,7 +1067,7 @@ TOP
 	}
 
 	&__text--discription {
-		padding: 54px 110px;
+		padding: 54px 20px;
 	}
 
 	&__image--large {
@@ -1116,6 +1114,7 @@ TOP
 	&__submenu {
 		width: 240px;
 		height: 170px;
+		margin-top: 20px;
 		position: relative;/*相対配置*/
 
 		&--image {

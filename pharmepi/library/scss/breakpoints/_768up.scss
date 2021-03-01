@@ -288,3 +288,9 @@ mobile. Make sure to double check these!
 	}
 } /* end .footer-links */
 
+
+.box-container {
+	&__text--discription {
+		padding: 54px 110px;
+	}
+}

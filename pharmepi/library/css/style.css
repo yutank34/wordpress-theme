@@ -1833,10 +1833,8 @@ FOOTER STYLES
   clear: both;
   background-color: #8D3939;
   color: #fff;
-  height: 65px;
   text-align: center;
-  padding: 4px;
-  line-height: 60px; }
+  padding: 20px; }
 
 /*
 if you checked out the link above:
@@ -1885,7 +1883,7 @@ TOP
   text-align: center;
   margin-top: 60px; }
   .box-container__text--discription {
-    padding: 54px 110px; }
+    padding: 54px 20px; }
   .box-container__image--large {
     width: 70%;
     height: auto;
@@ -1916,6 +1914,7 @@ TOP
   .inner-items__submenu {
     width: 240px;
     height: 170px;
+    margin-top: 20px;
     position: relative;
     /*相対配置*/ }
     .inner-items__submenu--image {
@@ -2274,7 +2273,9 @@ you can add resource intensive styles.
     the footer.
     */ }
 
-  /* end .footer-links */ }
+  /* end .footer-links */
+  .box-container__text--discription {
+    padding: 54px 110px; } }
 /*********************
 DESKTOP
 This is the average viewing window. So Desktops, Laptops, and
