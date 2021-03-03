@@ -42,21 +42,21 @@ if ($tax_posts) : ?>
 								<a href="<?php echo home_url(); ?>/researchs?type=pharmacoepide-miology">
 									<img src="<?php echo get_template_directory_uri(); ?>/assets/icon_pc.png" class="inner-items__item--icon">
 									<p class="inner-items__item--title">薬剤疫学研究</p>
-									<p class="inner-items__item--discription">医薬品の適正使用や副作用リスクを評価する研究</p>
+									<p class="inner-items__item--discription">医薬品の適正使用や</br>副作用リスクを評価する研究</p>
 								</a>
 							</li>
 							<li class="inner-items__item">
 								<a href="<?php echo home_url(); ?>/researchs?type=pharmacoeconomics">
 									<img src="<?php echo get_template_directory_uri(); ?>/assets/icon_economy.png" class="inner-items__item--icon">
 									<p class="inner-items__item--title">薬剤経済学研究</p>
-									<p class="inner-items__item--discription">医療の費用対効果や患者QOLを取り扱う研究</p>
+									<p class="inner-items__item--discription">医療の費用対効果や患者QOLを</br>取り扱う研究</p>
 								</a>
 							</li>
 							<li class="inner-items__item">
 								<a href="<?php echo home_url(); ?>/researchs?type=pharmacist-intervention">
 									<img src="<?php echo get_template_directory_uri(); ?>/assets/icon_health.png" class="inner-items__item--icon">
 									<p class="inner-items__item--title">ヘルスサービス研究</p>
-									<p class="inner-items__item--discription">医療機関や地域で活躍する薬剤師の役割を考える研究</p>
+									<p class="inner-items__item--discription">医療機関や地域で活躍する</br>薬剤師の役割を考える研究</p>
 								</a>
 							</li>
 						</ul>
