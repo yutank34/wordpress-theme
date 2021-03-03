@@ -994,6 +994,7 @@ FOOTER STYLES
 	color: $white;
 	text-align: center;
     padding: 20px;
+	margin-top: 60px;
 }
 
 	/*
@@ -1090,14 +1091,26 @@ TOP
 }
 
 .box-container {
-	text-align: center;
 	margin-top: 60px;
-
 	&__header {
+		text-align: center;
 	}
 
-	&__text--discription {
+	&__text-with-image {
 		padding: 54px 20px;
+
+		&--image {
+			width: 90%;
+			height: auto;
+			margin: 20px auto;
+		}
+
+		&--text {
+			font-weight: bold;
+			width: 90%;
+			height: auto;
+			margin: 0 auto;
+		}
 	}
 
 	&__image--large {
@@ -1113,7 +1126,7 @@ TOP
 }
 
 .navi {
-	padding: 34px 20px 54px 20px;
+	// padding: 34px 20px 54px 20px;
 }
 
 .inner-items {
@@ -1121,6 +1134,7 @@ TOP
 	justify-content: space-around;
 	flex-wrap: wrap;
 	margin-top: 40px;
+	text-align: center;
 
 	&__item {
 		margin-top: 15px;

@@ -302,3 +302,24 @@ mobile. Make sure to double check these!
 		width: 100%;
 	}
 }
+
+.box-container {
+	&__text-with-image {
+		padding: 54px 20px;
+		display: flex;
+		flex-flow: row-reverse;
+		justify-content: space-around;
+		align-items: center;
+
+		&--image {
+			width: 45%;
+			height: auto;
+			margin-top: 0px;
+		}
+
+		&--text {
+			width: 45%;
+			height: auto;
+		}
+	}
+}

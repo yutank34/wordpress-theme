@@ -1834,7 +1834,8 @@ FOOTER STYLES
   background-color: #8D3939;
   color: #fff;
   text-align: center;
-  padding: 20px; }
+  padding: 20px;
+  margin-top: 60px; }
 
 /*
 if you checked out the link above:
@@ -1898,10 +1899,20 @@ TOP
     list-style: circle; }
 
 .box-container {
-  text-align: center;
   margin-top: 60px; }
-  .box-container__text--discription {
+  .box-container__header {
+    text-align: center; }
+  .box-container__text-with-image {
     padding: 54px 20px; }
+    .box-container__text-with-image--image {
+      width: 90%;
+      height: auto;
+      margin: 20px auto; }
+    .box-container__text-with-image--text {
+      font-weight: bold;
+      width: 90%;
+      height: auto;
+      margin: 0 auto; }
   .box-container__image--large {
     width: 100%;
     height: auto;
@@ -1910,14 +1921,12 @@ TOP
     font-size: 26px;
     text-align: center; }
 
-.navi {
-  padding: 34px 20px 54px 20px; }
-
 .inner-items {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin-top: 40px; }
+  margin-top: 40px;
+  text-align: center; }
   .inner-items__item {
     margin-top: 15px; }
     .inner-items__item--icon {
@@ -2101,7 +2110,7 @@ tweeners.
   LAYOUT & GRID STYLES
   *********************/
   .wrap {
-    width: 100%;
+    width: 90%;
     margin: 0 auto; }
 
   /*********************
@@ -2305,7 +2314,21 @@ you can add resource intensive styles.
   .box-container {
     margin-top: 60px; }
     .box-container__image--large {
-      width: 100%; } }
+      width: 100%; }
+
+  .box-container__text-with-image {
+    padding: 54px 20px;
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: space-around;
+    align-items: center; }
+    .box-container__text-with-image--image {
+      width: 45%;
+      height: auto;
+      margin-top: 0px; }
+    .box-container__text-with-image--text {
+      width: 45%;
+      height: auto; } }
 /*********************
 DESKTOP
 This is the average viewing window. So Desktops, Laptops, and
