@@ -35,7 +35,7 @@
 
 								</header>
 
-								<section class="entry-content cf">
+								<section class="entry-content wrap cf">
 
 									<?php the_excerpt(); ?>
 

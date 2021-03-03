@@ -29,7 +29,7 @@
 
 								</header>
 
-								<section class="entry-content cf">
+								<section class="entry-content wrap cf">
 
 									<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
 

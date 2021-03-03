@@ -17,7 +17,7 @@
 						</header> <?php // end article header 
 									?>
 						<div class="wrap">
-							<section class="entry-content cf" itemprop="articleBody">
+							<section class="entry-content wrap cf" itemprop="articleBody">
 								<?php
 								// the content (pretty self explanatory huh)
 								the_content();

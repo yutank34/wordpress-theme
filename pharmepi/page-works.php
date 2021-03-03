@@ -10,7 +10,7 @@ function get_accordion($category_name, $by_tags)
 	echo '<div class="accordion-container">';
 	$tags = ['list'];
 	if ($by_tags) {
-		$tags = get_tags(array('orderby' => 'name', 'order' => ''));
+		$tags = get_tags(array('orderby' => 'description', 'order' => 'desc'));
 	} else {
 		$tags = get_tags(array('slug' => 'list'));
 	}
@@ -79,11 +79,11 @@ function get_accordion($category_name, $by_tags)
 					</section>
 					<section class="accordion-wrapper">
 						<h2>その他講演</h2>
-						<?php get_accordion('other-presentation', false); ?>
+						<?php get_accordion('other-presentation', true); ?>
 					</section>
 					<section class="accordion-wrapper">
 						<h2>出版物</h2>
-						<?php get_accordion('publication', false); ?>
+						<?php get_accordion('publication', true); ?>
 					</section>
 				</div>
 			</article>
