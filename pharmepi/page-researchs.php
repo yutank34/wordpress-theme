@@ -31,10 +31,13 @@
 									// 'parent' => $term_id で子タームを抽出できる
 								));
 								if (!empty($terms) && !is_wp_error($terms)) {
-									$isFirst = true;
+									$research = "pharmacoepide-miology";
+									if(isset($_GET['type'])) {
+										$research = $_GET['type'];
+									}
 									foreach ($terms as $term) {
 										$classParam = 'tab-container__tab tab-' . $term->term_id;
-										if ($isFirst) {
+										if ($research == $term->slug) {
 											$classParam = $classParam . ' is-active';
 										}
 										echo '<li class="' . $classParam . '">' . $term->name . '</li>';
@@ -46,11 +49,14 @@
 							<!--タブを切り替えて表示するコンテンツ-->
 							<div class="tab-container__panel-group">
 								<?php
-								$isFirst = true;
+								$research = "pharmacoepide-miology";
+								if(isset($_GET['type'])) {
+									$research = $_GET['type'];
+								}
 								foreach ($terms as $term) :
 									$childTerms = get_terms('research_category', array('parent' => $term->term_id, 'hide_empty' => false, 'orderby' => 'description'));
 									$panelArgs = 'tab-container__panel tab-' . $term->term_id;
-									if ($isFirst) {
+									if ($research == $term->slug) {
 										$panelArgs = $panelArgs . ' is-show';
 									}
 									$isFirst = false

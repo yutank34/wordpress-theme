@@ -39,26 +39,32 @@ if ($tax_posts) : ?>
 					<h3 class="box-container__header">薬と患者をとりまく社会に関する研究・教育活動の実施</h2>
 						<ul class="inner-items">
 							<li class="inner-items__item">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/icon_pc.png" class="inner-items__item--icon">
-								<p class="inner-items__item--title">薬剤疫学研究</p>
-								<p class="inner-items__item--discription">医薬品の適正使用や副作用リスクを評価する研究</p>
+								<a href="<?php echo home_url(); ?>/researchs?type=pharmacoepide-miology">
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/icon_pc.png" class="inner-items__item--icon">
+									<p class="inner-items__item--title">薬剤疫学研究</p>
+									<p class="inner-items__item--discription">医薬品の適正使用や副作用リスクを評価する研究</p>
+								</a>
 							</li>
 							<li class="inner-items__item">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/icon_economy.png" class="inner-items__item--icon">
-								<p class="inner-items__item--title">薬剤経済学研究</p>
-								<p class="inner-items__item--discription">医療の費用対効果や患者QOLを取り扱う研究</p>
+								<a href="<?php echo home_url(); ?>/researchs?type=pharmacoeconomics">
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/icon_economy.png" class="inner-items__item--icon">
+									<p class="inner-items__item--title">薬剤経済学研究</p>
+									<p class="inner-items__item--discription">医療の費用対効果や患者QOLを取り扱う研究</p>
+								</a>
 							</li>
 							<li class="inner-items__item">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/icon_health.png" class="inner-items__item--icon">
-								<p class="inner-items__item--title">ヘルスサービス研究</p>
-								<p class="inner-items__item--discription">医療機関や地域で活躍する薬剤師の役割を考える研究</p>
+								<a href="<?php echo home_url(); ?>/researchs?type=pharmacist-intervention">
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/icon_health.png" class="inner-items__item--icon">
+									<p class="inner-items__item--title">ヘルスサービス研究</p>
+									<p class="inner-items__item--discription">医療機関や地域で活躍する薬剤師の役割を考える研究</p>
+								</a>
 							</li>
 						</ul>
 				</div>
 			</div>
 			<div class="background-color--salmon box-container">
 				<div class="wrap box-container__text-with-image">
-					<p class ="box-container__text-with-image--text">公衆衛生・疫学研究室では、薬と患者をとりまく社会に関する研究を行っています。</br>　適切かつ効率的な薬物治療は薬と患者の関係だけでなく、それを取り巻く医療環境である社会全体を理解することが大切です。</br>そのため、医薬品の適正使用や副作用リスクを評価する「薬剤疫学」、医療の費用対効果や患者QOLを取り扱う「薬剤経済学」、医療機関や地域で活躍する薬剤師の役割を考える「ヘルスサービス研究」を3つの柱として研究・教育活動を行ってます。</br>　薬物治療に関連した情報を「つくり」「つたえ」「つかう」ことは、薬剤師・薬学教育の中で重要になってきています。</p>
+					<p class="box-container__text-with-image--text">公衆衛生・疫学研究室では、薬と患者をとりまく社会に関する研究を行っています。</br>　適切かつ効率的な薬物治療は薬と患者の関係だけでなく、それを取り巻く医療環境である社会全体を理解することが大切です。</br>そのため、医薬品の適正使用や副作用リスクを評価する「薬剤疫学」、医療の費用対効果や患者QOLを取り扱う「薬剤経済学」、医療機関や地域で活躍する薬剤師の役割を考える「ヘルスサービス研究」を3つの柱として研究・教育活動を行ってます。</br>　薬物治療に関連した情報を「つくり」「つたえ」「つかう」ことは、薬剤師・薬学教育の中で重要になってきています。</p>
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/ph_ilast_transparent.png" class="box-container__text-with-image--image">
 				</div>
 			</div>

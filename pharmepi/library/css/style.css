@@ -1933,9 +1933,11 @@ TOP
       width: auto;
       height: 70px; }
     .inner-items__item--title {
+      color: #251715;
       font-size: 20px;
       margin-top: 5px; }
     .inner-items__item--discription {
+      color: #251715;
       width: 240px;
       margin-top: 5px; }
   .inner-items__submenu {
