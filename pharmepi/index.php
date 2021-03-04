@@ -14,7 +14,13 @@ if ($tax_posts) : ?>
 			<ul class="top-news--list__ul">
 				<?php foreach ($tax_posts as $tax_post) : ?>
 					<li class='list__link top-news--list__li'>
-						○&nbsp;<a href="<?php echo get_permalink($tax_post->ID); ?>" class="a--underline"><?php echo get_the_title($tax_post->ID); ?></a>
+						<?php 
+							if ($tax_post->post_content == NULL) {
+								echo '○&nbsp;'.$tax_post->post_title;
+							} else {
+								echo '○&nbsp;<a href="'.get_permalink($tax_post->ID).'" class="a--underline">'.$tax_post->post_title.'</a>';
+							}
+						?>
 					</li>
 				<?php endforeach;
 				wp_reset_postdata(); ?>

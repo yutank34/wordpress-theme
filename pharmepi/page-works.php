@@ -40,8 +40,13 @@ function get_accordion($category_name, $by_tags)
 			echo '<ul class="' . $contentsArgs . '">';
 			$index = 1;
 			foreach ($tax_posts as $tax_post) {
-				echo '<li class="list__link">' . $index . '.&nbsp;' . '<a href="' . get_permalink($tax_post->ID) . '" class="a--underline">' . get_the_title($tax_post->ID) . '</a></li>';
-				$index++;
+				echo '<li class="list__link">';
+				if ($tax_post->post_content == NULL) {
+					echo $index++ . '.&nbsp;' . $tax_post->post_title;
+				} else {
+					echo $index++ . '.&nbsp;<a href="' . get_permalink($tax_post->ID) . '" class="a--underline">' . $tax_post->post_title . '</a>';
+				}
+				echo '</li>';
 			}
 			echo '</ul>';
 		}

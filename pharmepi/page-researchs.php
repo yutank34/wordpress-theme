@@ -32,7 +32,7 @@
 								));
 								if (!empty($terms) && !is_wp_error($terms)) {
 									$research = "pharmacoepide-miology";
-									if(isset($_GET['type'])) {
+									if (isset($_GET['type'])) {
 										$research = $_GET['type'];
 									}
 									foreach ($terms as $term) {
@@ -50,7 +50,7 @@
 							<div class="tab-container__panel-group">
 								<?php
 								$research = "pharmacoepide-miology";
-								if(isset($_GET['type'])) {
+								if (isset($_GET['type'])) {
 									$research = $_GET['type'];
 								}
 								foreach ($terms as $term) :
@@ -82,19 +82,24 @@
 												$itemAttribute = "tab-container__panel--items";
 												$headerAttribute = "tab-container__panel--items-header";
 												if ($lastWord == "done") {
-													$headerAttribute = $headerAttribute.'-weak';
-													$itemAttribute = $itemAttribute.'-weak';
-
+													$headerAttribute = $headerAttribute . '-weak';
+													$itemAttribute = $itemAttribute . '-weak';
 												}
 										?>
 												<ul class="<?php echo $itemAttribute; ?>">
-												<p class="<?php echo $headerAttribute; ?>"><?php echo $childTerm->name; ?></p>
+													<p class="<?php echo $headerAttribute; ?>"><?php echo $childTerm->name; ?></p>
 													<?php
 													$index = 1;
 													foreach ($tax_posts as $tax_post) :
 													?>
 														<li class="list__link">
-															<?php echo $index++ . '.&nbsp;'; ?><a href="<?php echo get_permalink($tax_post->ID); ?>" class="a--underline"><?php echo get_the_title($tax_post->ID); ?></a>
+															<?php
+															if ($tax_post->post_content == NULL) {
+																echo $index++ . '.&nbsp;' . $tax_post->post_title;
+															} else {
+																echo $index++ . '.&nbsp;<a href="' . get_permalink($tax_post->ID) . '" class="a--underline">' . $tax_post->post_title . '</a>';
+															}
+															?>
 														</li>
 													<?php endforeach;
 													wp_reset_postdata(); ?>
