@@ -14,12 +14,12 @@ if ($tax_posts) : ?>
 			<ul class="top-news--list__ul">
 				<?php foreach ($tax_posts as $tax_post) : ?>
 					<li class='list__link top-news--list__li'>
-						<?php 
-							if ($tax_post->post_content == NULL) {
-								echo '○&nbsp;'.$tax_post->post_title;
-							} else {
-								echo '○&nbsp;<a href="'.get_permalink($tax_post->ID).'" class="a--underline">'.$tax_post->post_title.'</a>';
-							}
+						<?php
+						if ($tax_post->post_content == NULL) {
+							echo '<p>○&nbsp;' . $tax_post->post_title . '</p>';
+						} else {
+							echo '○&nbsp;<a href="' . get_permalink($tax_post->ID) . '" class="a--underline">' . $tax_post->post_title . '</a>';
+						}
 						?>
 					</li>
 				<?php endforeach;

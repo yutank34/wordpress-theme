@@ -95,7 +95,7 @@
 														<li class="list__link">
 															<?php
 															if ($tax_post->post_content == NULL) {
-																echo $index++ . '.&nbsp;' . $tax_post->post_title;
+																echo '<p>' . $index++ . '.&nbsp;' . $tax_post->post_title . '</p>';
 															} else {
 																echo $index++ . '.&nbsp;<a href="' . get_permalink($tax_post->ID) . '" class="a--underline">' . $tax_post->post_title . '</a>';
 															}
