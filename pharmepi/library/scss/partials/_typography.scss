@@ -65,7 +65,8 @@ more here: http://www.newnet-soft.com/blog/csstypography
 p {
   -ms-word-wrap: break-word;
   word-break: break-word; //non-standart css for webkit
-  word-wrap: break-word;
+  // word-wrap: break-word;
+  overflow-wrap:break-word;
   // cleaning up the ragged lines and breaks
   -webkit-hyphens: auto;
      -moz-hyphens: auto;

@@ -512,7 +512,7 @@ more here: http://www.newnet-soft.com/blog/csstypography
 p {
   -ms-word-wrap: break-word;
   word-break: break-word;
-  word-wrap: break-word;
+  overflow-wrap: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   hyphens: auto;
@@ -1909,7 +1909,7 @@ TOP
       height: auto;
       margin: 20px auto; }
     .box-container__text-with-image--text {
-      font-weight: bold;
+      line-height: 190%;
       width: 90%;
       height: auto;
       margin: 0 auto; }
