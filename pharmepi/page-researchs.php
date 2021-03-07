@@ -14,13 +14,13 @@
 				</header> <?php // end article header 
 							?>
 				<div class="wrap">
-					<section class="entry-content cf" itemprop="articleBody">
+					<div class="entry-content cf" itemprop="articleBody">
 						<?php
 						// the content (pretty self explanatory huh)
 						the_content();
 						?>
-					</section>
-					<section class="tab-section">
+					</div>
+					<div class="tab-section">
 						<div class="tab-container">
 							<!--タブ-->
 							<ul class="tab-container__tab-group">
@@ -112,11 +112,11 @@
 								?>
 							</div>
 						</div>
-					</section>
-					<section class="entry-content">
+					</div>
+					<div class="entry-content">
 						<p>倫理審査委員会より情報公開が求められている研究についてはこちらで公開しております。</p>
 						<button type=“button” onclick="location.href='<?php echo home_url(); ?>/%E7%A0%94%E7%A9%B6%E5%85%AC%E9%96%8B%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6'" class="main-btn">患者情報等を用いた研究について</button>
-					</section>
+					</div>
 				</div>
 			</article>
 	<?php endwhile;

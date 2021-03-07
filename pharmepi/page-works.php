@@ -5,7 +5,7 @@
 });
 ?>
 <?php
-function get_accordion($category_name, $by_tags)
+function get_accordion($category_name, $by_tags, $is_open)
 {
 	echo '<div class="accordion-container">';
 	$tags = ['list'];
@@ -14,7 +14,7 @@ function get_accordion($category_name, $by_tags)
 	} else {
 		$tags = get_tags(array('slug' => 'list'));
 	}
-	$isFirst = true;
+	$isFirst = $is_open;
 	foreach ($tags as $tag) {
 		$tax_posts = get_posts(array(
 			'post_type' => 'post',
@@ -68,28 +68,28 @@ function get_accordion($category_name, $by_tags)
 					<h1 class="page-title wrap" itemprop="headline"><?php the_title(); ?></h1>
 				</header>
 				<div class="wrap">
-					<section class="entry-content cf" itemprop="articleBody">
+					<div class="entry-content cf" itemprop="articleBody">
 						<?php
 						// the content (pretty self explanatory huh)
 						the_content();
 						?>
-					</section>
-					<section class="accordion-wrapper">
+					</div>
+					<div class="accordion-wrapper">
 						<h2>原著論文</h2>
-						<?php get_accordion('paper', true); ?>
-					</section>
-					<section class="accordion-wrapper">
+						<?php get_accordion('paper', true, true); ?>
+					</div>
+					<div class="accordion-wrapper">
 						<h2>学会発表</h2>
-						<?php get_accordion('conference-presentation', true); ?>
-					</section>
-					<section class="accordion-wrapper">
+						<?php get_accordion('conference-presentation', true, true); ?>
+					</div>
+					<div class="accordion-wrapper">
 						<h2>その他講演</h2>
-						<?php get_accordion('other-presentation', true); ?>
-					</section>
-					<section class="accordion-wrapper">
+						<?php get_accordion('other-presentation', true, false); ?>
+					</div>
+					<div class="accordion-wrapper">
 						<h2>出版物</h2>
-						<?php get_accordion('publication', true); ?>
-					</section>
+						<?php get_accordion('publication', true, false); ?>
+					</div>
 				</div>
 			</article>
 	<?php endwhile;
