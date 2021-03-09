@@ -88,19 +88,19 @@ if ($tax_posts) : ?>
 						</li>
 						<li class="inner-items__submenu">
 							<a href="<?php echo home_url(); ?>/researchs">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/stock-photo-book-in-library-with-open-textbook-education-learning-concept-1274296330.jpg" alt="" class="inner-items__submenu--image">
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/navi-researchs.jpg" alt="" class="inner-items__submenu--image">
 								<p class="inner-items__submenu--text">研究内容の紹介</p>
 							</a>
 						</li>
 						<li class="inner-items__submenu">
 							<a href="<?php echo home_url(); ?>/works">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/stock-photo-speaker-giving-a-talk-in-conference-hall-at-business-event-audience-at-the-conference-hall-1117902230.jpg" alt="" class="inner-items__submenu--image">
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/navi-works.jpg" alt="" class="inner-items__submenu--image">
 								<p class="inner-items__submenu--text">研究業績の紹介</p>
 							</a>
 						</li>
 						<li class="inner-items__submenu">
 							<a href="<?php echo home_url(); ?>/links">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/stock-photo-smart-city-and-iot-internet-of-things-concept-ict-information-communication-technology-1160793658.jpg" alt="" class="inner-items__submenu--image">
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/navi-links.jpg" alt="" class="inner-items__submenu--image">
 								<p class="inner-items__submenu--text">リンク</p>
 							</a>
 						</li>
