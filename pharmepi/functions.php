@@ -300,6 +300,26 @@ function create_post_type_named_news() {
 }
 add_action( 'init', 'create_post_type_named_news' );
 
+function create_post_type_named_obog() {
+  $supports = [
+    'title',
+    'editor',
+    'thumbnail',
+    'revisions'
+  ];
+    
+  register_post_type( 'obog',
+    array(
+      'label' => '卒業生',
+      'public' => true,
+      'has_archive' => false,
+      'menu_position' => 8,
+      'supports' => $supports
+    )
+  );
+}
+add_action( 'init', 'create_post_type_named_obog' );
+
 function set_fs_method($args) {
   return 'direct';
 }
